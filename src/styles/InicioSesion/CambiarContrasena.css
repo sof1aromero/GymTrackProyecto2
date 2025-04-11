@@ -1,0 +1,36 @@
+.contenedor-cambio {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.contenedor-cambio input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 80%;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+}
+
+.contenedor-cambio button {
+  padding: 10px 20px;
+  background: #272e0a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contenedor-cambio button:hover {
+  background: #0056b3;
+}
+
+.mensaje {
+  margin-top: 10px;
+  font-weight: bold;
+}
