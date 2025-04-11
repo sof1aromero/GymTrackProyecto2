@@ -1,0 +1,21 @@
+.footer-container {
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.social-icons {
+  margin-top: 0.5rem;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #00e676;
+}
