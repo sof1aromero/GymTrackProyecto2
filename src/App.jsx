@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import React, { useState } from "react";
 import NavBar from "./components/InicioSesionFN/NavBar";
 import Registro from "./components/InicioSesion/Registro";
 import RecuperarContrasena from "./components/InicioSesion/RecuperarContrasena";
@@ -8,11 +9,13 @@ import Footer from "./components/InicioSesionFN/Footer";
 import CalendarioCliente from "./components/ClienteEntrenador/CalendarioCliente";
 import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
+import MisServicios from "./components/ServiciosNotificaciones/MisServicios";
+import NavBarPriv from "./components/ServiciosNotificaciones/NavBarPriv";
 
 function App() {
   return (
     <>
-      <NavBar />
+<NavBar />
 
       <Routes>
         <Route path="/" element={<IniciarSesion />} />
@@ -23,6 +26,7 @@ function App() {
         <Route path="/calendario" element={<CalendarioCliente />} />
         <Route path="/historial-clases" element={<HistorialClases />} />
         <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
+        <Route path="/mis-servicios" element={<MisServicios />} />
         </Routes>
       <Footer />
     </>
