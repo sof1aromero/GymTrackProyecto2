@@ -54,6 +54,12 @@ function IniciarSesion() {
         </section>
       </section>
 
+      <div style={{ marginTop: "20px" }}>
+        <Link to="/calendario" className="ver-calendario-link">
+          Ver calendario de clases
+        </Link>
+      </div>
+
     </div>
   );
 }
