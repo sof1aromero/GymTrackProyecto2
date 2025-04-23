@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-      <img src="/logo.png" alt="Logo GymTrack" className="logo-navbar" />
+      <img src="src/img/logo.png" alt="Logo GymTrack" className="logo-navbar" />
         <ul className="nav-links">
           <li><Link to="/entrenadores">ENTRENADORES</Link></li>
           <li><Link to="/servicios">SERVICIOS</Link></li>
