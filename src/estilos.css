@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background-color: #f4f6fc;
+  }
+  
+  .nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .nav .logo {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .container {
+    padding: 20px 40px;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar input {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+  }
+  
+  .blue-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .factura-box {
+    background-color: white;
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+  }
+  
+  .form-row label {
+    flex: 1;
+    font-weight: bold;
+  }
+  
+  .form-row input {
+    flex: 1;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .full-width {
+    width: 100%;
+    padding: 6px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  thead {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .download {
+    text-align: right;
+    margin-top: 20px;
+  }
+  
