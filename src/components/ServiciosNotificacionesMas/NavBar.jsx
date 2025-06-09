@@ -1,10 +1,9 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
-import LogoGymTrack from "../assets/imagenes/LogoGymTrack.png";
+import LogoGymTrack from "../../assets/imagenes/LogoGymTrack.png";
 import MenuUsuario from "./MenuUsuario";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MenuNotificaciones from "./MenuNotificaciones";
-import React, { useState } from "react"; 
-import { useNavigate } from "react-router-dom"
+import React, { useState } from "react";
 
 const NavBar = () => {
     const navigate = useNavigate();
