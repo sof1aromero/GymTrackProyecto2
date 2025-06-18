@@ -11,6 +11,7 @@ import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
 import MisServicios from "./components/ServiciosNotificaciones/MisServicios";
 import NavBarPriv from "./components/ServiciosNotificaciones/NavBarPriv";
+import DashboardAdmin from './components/Administrador/DashboardAdmin';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/historial-clases" element={<HistorialClases />} />
         <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
         <Route path="/mis-servicios" element={<MisServicios />} />
+        <Route path="/admin" element={<DashboardAdmin />} />
         </Routes>
       <Footer />
     </>

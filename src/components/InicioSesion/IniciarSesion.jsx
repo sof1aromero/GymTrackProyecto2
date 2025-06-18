@@ -12,19 +12,16 @@ function IniciarSesion({ onLogin }) {
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
-    // Validaciones básicas (puedes personalizar)
+    // Validaciones básicas
     if (!tipoDocumento || !documento || !password) {
       alert("Por favor completa todos los campos");
       return;
     }
 
-    // Aquí iría la lógica real de autenticación (llamada a la API, etc.)
-    // Simulación de inicio de sesión exitoso
     if (documento === '12345678' && password === '12345678') {
-      // Simulación de almacenamiento de token
       localStorage.setItem('authToken', 'fake_token');
-      onLogin(); // Llama a la función onLogin para actualizar el estado en App
-    } else {
+      navigate("/admin");
+    }else {
       alert('Credenciales incorrectas');
     }
   };
