@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AgregarServicio from "../ServiciosNotificaciones/AgregarServicio"; 
+import AgregarServicio from "../ClienteServicios/AgregarServicio"; 
 
 const serviciosUsuario = [
     { id: 1, nombre: "Servicio 1", descripcion: "Gym All" },
