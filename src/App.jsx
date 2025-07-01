@@ -1,15 +1,19 @@
 import { Routes, Route, Router } from "react-router-dom";
 
-
 import './App.css'
 import NavBar from '../src/components/ServiciosNotificacionesMas/NavBar'
-import MisServicios from './components/ServiciosNotificacionesMas/MisServicios';
-import Perfil from '../src/components/ServiciosNotificacionesMas/Perfil';
 import Footer from '../src/components/ServiciosNotificacionesMas/Footer'
-import CentroNotificaciones from '../src/components/ServiciosNotificacionesMas/CentroNotificaciones';
-import MenuNotificaciones from './components/ServiciosNotificacionesMas/MenuNotificaciones';
-import AgregarServicio from './components/ServiciosNotificacionesMas/AgregarServicio';
 import  "./styles/estilos/LAYOUTT.css"
+import Registro from "./components/InicioSesion/Registro";
+import RecuperarContrasena from "./components/InicioSesion/RecuperarContrasena";
+import IniciarSesion from "./components/InicioSesion/IniciarSesion";
+import CambiarContrasena from "./components/InicioSesion/CambiarContrasena";
+import Footer from "./components/InicioSesionFN/Footer";
+import CalendarioCliente from "./components/ClienteEntrenador/CalendarioCliente";
+import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
+import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
+import NavBarPriv from "./components/InicioSesionFN/NavBarPriv";
+import DashboardAdmin from './components/Administrador/DashboardAdmin';
 
 
 function App() {
@@ -17,24 +21,22 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        {/*<Route path="/" element={<IniciarSesion />} />*/}
-        {/*<Route path="/registro" element={<Registro />} />*/}
-        {/*<Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />*/}
-        {/*<Route path="/iniciar-sesion" element={<IniciarSesion />} />*/}
-        {/*<Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
+        <Route path="/" element={<IniciarSesion />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
+        <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+        <Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
         <Route path="/calendario" element={<CalendarioCliente />} />
         <Route path="/historial-clases" element={<HistorialClases />} />
-        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />*/}
-        
-        <Route path='/perfil' element={<Perfil/>}/>
-        <Route path='/mis-servicios' element={<MisServicios/>}/>
-        <Route path='/agregar-servicio' element={<AgregarServicio/>}/>
-        <Route path='/menuNotificaciones' element={<MenuNotificaciones/>}/>
-        <Route path='/notificaciones' element={<CentroNotificaciones/>}/>
+        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
+        <Route path="/admin" element={<DashboardAdmin />} />
+
+        <Route element={<NavBarPriv />}/>
       </Routes>
+
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
