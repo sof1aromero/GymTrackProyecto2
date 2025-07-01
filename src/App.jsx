@@ -30,6 +30,7 @@ function App() {
         <Route path="/mis-servicios" element={<MisServicios />} />
         <Route path="/admin" element={<DashboardAdmin />} />
         </Routes>
+        /*hola/*
       <Footer />
     </>
   );
