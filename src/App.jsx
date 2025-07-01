@@ -9,9 +9,8 @@ import Footer from "./components/InicioSesionFN/Footer";
 import CalendarioCliente from "./components/ClienteEntrenador/CalendarioCliente";
 import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
-import MisServicios from "./components/ServiciosNotificaciones/MisServicios";
-import NavBarPriv from "./components/ServiciosNotificaciones/NavBarPriv";
 import DashboardAdmin from './components/Administrador/DashboardAdmin';
+import InicioAdmin from "./components/Administrador/InicioAdmin";
 
 function App() {
   return (
@@ -27,10 +26,10 @@ function App() {
         <Route path="/calendario" element={<CalendarioCliente />} />
         <Route path="/historial-clases" element={<HistorialClases />} />
         <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
-        <Route path="/mis-servicios" element={<MisServicios />} />
         <Route path="/admin" element={<DashboardAdmin />} />
+        <Route path="/admin/inicio" element={<InicioAdmin />}/>
         </Routes>
-        /*hola/*
+        
       <Footer />
     </>
   );
