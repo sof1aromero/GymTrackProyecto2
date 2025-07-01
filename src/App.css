@@ -1,0 +1,11 @@
+.custom-navbar {
+    height: 80px; /* más alto */
+}
+
+.nav-links .nav-link {
+  font-size: 1.3rem; /* letras más grandes */
+}
+
+.navbar-brand img {
+    max-height: 100px;
+}

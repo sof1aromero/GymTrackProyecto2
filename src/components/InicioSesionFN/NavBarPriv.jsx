@@ -1,8 +1,8 @@
 import { Navbar, Nav, Container } from "react-bootstrap";
 import LogoGymTrack from "../../img/logo.png";
-import MenuUsuario from "../ServiciosNotificaciones/MenuUsuario";
+import MenuUsuario from "../Cliente/MenuUsuario";
 import { Link } from "react-router-dom";
-import MenuNotificaciones from "../ServiciosNotificaciones/MenuNotificaciones";
+import MenuNotificaciones from "../ClienteNotificaciones/MenuNotificaciones";
 import React, { useState } from "react"; 
 import { useNavigate } from "react-router-dom"
 
