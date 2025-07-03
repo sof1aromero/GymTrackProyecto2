@@ -6,7 +6,7 @@ const DashboardEntrenador = () => {
   return (
     <div className="layout-entrenador">
       <aside className="sidebar-entrenador">
-         <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
+        <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
         <div className="perfil-entrenador">
           <div className="perfil-icono">
             <i className="fas fa-user-circle"></i>
