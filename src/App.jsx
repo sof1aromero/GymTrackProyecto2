@@ -11,6 +11,10 @@ import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
 import DashboardAdmin from './components/Administrador/DashboardAdmin';
 import InicioAdmin from "./components/Administrador/InicioAdmin";
+import DashboardEntrenador from "./components/Entrenador/DashboardEntrenador";
+import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
+import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
+import CarteraPagos from "./components/Entrenador/CarteraPagos";
 
 function App() {
   return (
@@ -28,6 +32,10 @@ function App() {
         <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
         <Route path="/admin" element={<DashboardAdmin />} />
         <Route path="/admin/inicio" element={<InicioAdmin />}/>
+        <Route path="/entrenador" element={<DashboardEntrenador />}/>
+        <Route path="/entrenador/inicio" element={<InicioEntrenador />}/>
+        <Route path="/entrenador/calendario" element={<CalendarioEntrenador />}/>
+        <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />}/>
         </Routes>
         
       <Footer />
