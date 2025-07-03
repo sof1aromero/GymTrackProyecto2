@@ -15,6 +15,7 @@ import DashboardEntrenador from "./components/Entrenador/DashboardEntrenador";
 import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
 import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
 import CarteraPagos from "./components/Entrenador/CarteraPagos";
+import PerfilEntrenador from "./components/Entrenador/PerfilEntrenador";
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
         <Route path="/entrenador/inicio" element={<InicioEntrenador />}/>
         <Route path="/entrenador/calendario" element={<CalendarioEntrenador />}/>
         <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />}/>
+        <Route path="/entrenador/perfil-entrenador" element={<PerfilEntrenador />}/>
+
         </Routes>
         
     </>
