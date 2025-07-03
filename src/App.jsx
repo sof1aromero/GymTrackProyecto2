@@ -15,7 +15,7 @@ import InicioAdmin from "./components/Administrador/InicioAdmin";
 function App() {
   return (
     <>
-<NavBar />
+      <NavBar />
 
       <Routes>
         <Route path="/" element={<IniciarSesion />} />
@@ -30,7 +30,6 @@ function App() {
         <Route path="/admin/inicio" element={<InicioAdmin />}/>
         </Routes>
         
-      <Footer />
     </>
   );
 }

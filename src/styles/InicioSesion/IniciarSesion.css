@@ -1,77 +1,120 @@
-.contenedor {
+/* Fondo con imagen de gimnasio */
+.login-cliente-container {
+  background-image: url("/imagCouple.jpg"); /* Ajusta el nombre si usas otro */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: auto;
-  background-color: #ffffff;
-}
-
-.titulo {
-  padding: 10px;
-  text-align: center;
-  font-size: 24px;
-}
-
-.logo {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.formulario {
-  display: flex;
-  width: 30%;
-  flex-direction: column;
-  background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 7px 10px 9px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 
+/* Capa de superposición */
+.login-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del formulario */
+.login-box {
+  background: transparent;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  color: white;
+}
+
+.login-title {
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Campos del formulario */
+.campo,
 .campoDoc,
 .campoPass {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
-label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.btnIniciarSesion {
-  background-color: #505050;
-  color: white;
+input,
+select {
+  width: 100%;
+  padding: 12px;
   border: none;
-  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  display: block;
-  margin: 20px auto;
+  font-size: 14px;
+}
 
+/* Botón de Login */
+.btnIniciarSesion {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #2CD3CF, #176D6B);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
 .btnIniciarSesion:hover {
-  background-color: #272727;
+  opacity: 0.9;
 }
 
-.footer {
-  height: 100px;
+.login-links p,
+.login-links a {
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.login-links a {
+  text-decoration: underline;
+}
+
+/* Recuérdame */
+.recordar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  color: white;
+  gap: 10px;
+  padding-left: 2px;
+}
+
+/* Enlace calendario */
+.ver-calendario-link {
+  color: white;
+  text-decoration: underline;
+  display: block;
+  text-align: center;
   margin-top: 20px;
+  font-weight: bold;
 }
 
-.opciones a {
-  color: rgb(67, 67, 68);
+/* Footer adaptado desde componente externo */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+form {
+  text-align: left;
 }
