@@ -1,24 +1,42 @@
-import { Link } from "react-router-dom";
-import "../../styles/InicioSesionFN/NavBar.css";
+// src/components/NavbarLanding.jsx
+import React from "react";
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import '../../styles/InicioSesionFN/NavBar.css';
 
-function NavBar() {
+const NavbarLanding= () => {
   return (
-    <nav className="navbar">
-      <div className="navbar-left">
-      <img src="src/img/logo.png" alt="Logo GymTrack" className="logo-navbar" />
-        <ul className="nav-links">
-          <li><Link to="/entrenadores">ENTRENADORES</Link></li>
-          <li><Link to="/servicios">SERVICIOS</Link></li>
-          <li><Link to="/contacto">CONTACTANOS</Link></li>
-        </ul>
-      </div>
+    <Navbar expand="lg" className="py-0" style={{minHeight: "90px"}}>
+      <Container fluid className="px-4 px-md-5">
+        {/* Logo */}
+        <Navbar.Brand href="#" className="d-flex align-items-center">
+          <img
+            src="/logoGymTrackSinFondo.png"
+            alt="GymTrack"
+            className="logo-img me-2"
+          />
+        </Navbar.Brand>
 
-      <div className="navbar-right">
-        <Link to="/iniciar-sesion" className="btn-nav">Iniciar sesión</Link>
-        <Link to="/registro" className="btn-nav">Crear cuenta</Link>
-      </div>
-    </nav>
+        {/* Botón hamburguesa para móviles */}
+        <Navbar.Toggle aria-controls="navbar-landing" />
+
+        <Navbar.Collapse id="navbar-landing" className="justify-content-between">
+          {/* Enlaces */}
+          <Nav className="ms-auto me-4 navbar-center-links d-flex gap-4 fw-semibold">
+            <Nav.Link href="#contacto" className="text-dark">Contáctanos</Nav.Link>
+            <Nav.Link href="#servicios" className="text-dark">Nuestros servicios</Nav.Link>
+            <Nav.Link href="#visitanos" className="text-dark">Visítanos</Nav.Link>
+            <Nav.Link href="#entrenadores" className="text-dark">Entrenadores</Nav.Link>
+          </Nav>
+
+          {/* Botones */}
+          <div className="d-flex gap-3">
+            <Button className="btn-login">Iniciar Sesión</Button>
+            <Button className="btn-registrarse">Registrarse</Button>
+          </div>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-}
+};
 
-export default NavBar;
+export default NavbarLanding;

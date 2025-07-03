@@ -19,7 +19,7 @@ import CarteraPagos from "./components/Entrenador/CarteraPagos";
 function App() {
   return (
     <>
-<NavBar />
+      <NavBar />
 
       <Routes>
         <Route path="/" element={<IniciarSesion />} />
@@ -38,7 +38,6 @@ function App() {
         <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />}/>
         </Routes>
         
-      <Footer />
     </>
   );
 }
