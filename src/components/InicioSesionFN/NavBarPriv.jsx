@@ -6,15 +6,17 @@ import "../../styles/InicioSesionFN/NavBarPriv.css";
 const NavBarPriv = () => {
   const [showNotifications, setShowNotifications] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [tieneNotificaciones, setTieneNotificaciones] = useState(true); // 🔴 Punto rojo
+  const [tieneNotificaciones, setTieneNotificaciones] = useState(true);
 
   const toggleNotification = () => {
     setShowNotifications(!showNotifications);
-    setTieneNotificaciones(false); // Oculta 🔴 al abrir
+    setTieneNotificaciones(false);
+    setShowMenu(false); // Cierra menú si estaba abierto
   };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
+    setShowNotifications(false); // Cierra notificaciones si estaban abiertas
   };
 
   return (
@@ -32,7 +34,7 @@ const NavBarPriv = () => {
           <FaBell className="icon" />
           {tieneNotificaciones && <span className="notification-dot" />}
           {showNotifications && (
-            <div className="dropdown">
+            <div className="dropdown notificaciones">
               <p>No tienes notificaciones nuevas.</p>
             </div>
           )}
@@ -42,10 +44,13 @@ const NavBarPriv = () => {
         <div className="icon-wrapper" onClick={toggleMenu}>
           <FaBars className="icon" />
           {showMenu && (
-            <div className="dropdown">
+            <div className="dropdown menu-flotante">
+              <Link to="/cliente/inicio">Mis Servicios</Link>
+              <Link to="/cliente/clases">Clases</Link>
+              <Link to="/cliente/pagos">Pagos</Link>
+              <Link to="/cliente/notificaciones">Notificaciones</Link>
+              <Link to="/cliente/incidencias">Incidencias</Link>
               <Link to="/cliente/perfil">Perfil</Link>
-              <Link to="/cliente/configuracion">Configuración</Link>
-              <Link to="/logout">Cerrar sesión</Link>
             </div>
           )}
         </div>

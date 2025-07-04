@@ -18,7 +18,6 @@ function IniciarSesion() {
 
     // Simulación de autenticación
     if (documento === "12345678" && password === "12345678") {
-    localStorage.setItem("authToken", "fake_token");
     localStorage.setItem("isAuthenticated", "true"); // 👈 Marca que el usuario ha iniciado sesión
     navigate("/cliente/inicio"); // 👈 Redirige
     window.location.reload();    // 👈 Recarga para que App.jsx detecte la sesión activa
