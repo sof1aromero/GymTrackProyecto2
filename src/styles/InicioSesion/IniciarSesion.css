@@ -1,43 +1,39 @@
-/* Fondo con imagen de gimnasio */
 .login-cliente-container {
-  background-image: url("/imagCouple.jpg"); /* Ajusta el nombre si usas otro */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  background-image: url("/imagCouple.jpg");
+  background-color: white;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
+  padding-bottom: 100px;
 }
 
-/* Capa de superposición */
 .login-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 100%;
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 3rem 1rem;
 }
 
-/* Contenedor del formulario */
 .login-box {
-  background: transparent;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 12px;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   color: white;
 }
 
 .login-title {
   text-align: left;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
+  color: white;
 }
 
-/* Campos del formulario */
 .campo,
 .campoDoc,
 .campoPass {
@@ -48,17 +44,16 @@ input,
 select {
   width: 100%;
   padding: 12px;
+  background-color: #eee;
   border: none;
   border-radius: 5px;
   font-size: 14px;
 }
 
-/* Botón de Login */
 .btnIniciarSesion {
   width: 100%;
   padding: 12px;
-  margin-top: 10px;
-  background: linear-gradient(90deg, #2CD3CF, #176D6B);
+  background: linear-gradient(90deg, #2cd3cf, #176d6b);
   color: white;
   font-weight: bold;
   border: none;
@@ -72,49 +67,23 @@ select {
 
 .login-links p,
 .login-links a {
-  color: white;
+  color: #333;
   text-align: center;
   margin-top: 10px;
   font-size: 14px;
+  color: white;
 }
 
 .login-links a {
   text-decoration: underline;
+  color: white;
 }
 
-/* Recuérdame */
 .recordar {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-top: 10px;
-  color: white;
   gap: 10px;
-  padding-left: 2px;
+  margin-top: 10px;
+  color: #ffffff;
 }
 
-/* Enlace calendario */
-.ver-calendario-link {
-  color: white;
-  text-decoration: underline;
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  font-weight: bold;
-}
-
-/* Footer adaptado desde componente externo */
-footer {
-  background-color: #000;
-  color: white;
-  padding: 15px 0;
-  text-align: center;
-  font-size: 14px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-form {
-  text-align: left;
-}

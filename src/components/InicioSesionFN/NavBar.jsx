@@ -2,6 +2,7 @@
 import React from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import '../../styles/InicioSesionFN/NavBar.css';
+import {Link} from "react-router-dom"
 
 const NavbarLanding= () => {
   return (
@@ -25,13 +26,12 @@ const NavbarLanding= () => {
             <Nav.Link href="#contacto" className="text-dark">Contáctanos</Nav.Link>
             <Nav.Link href="#servicios" className="text-dark">Nuestros servicios</Nav.Link>
             <Nav.Link href="#visitanos" className="text-dark">Visítanos</Nav.Link>
-            <Nav.Link href="#entrenadores" className="text-dark">Entrenadores</Nav.Link>
           </Nav>
 
           {/* Botones */}
           <div className="d-flex gap-3">
-            <Button className="btn-login">Iniciar Sesión</Button>
-            <Button className="btn-registrarse">Registrarse</Button>
+              <Button as={Link} to="/iniciar-sesion" className="btn-login">Iniciar Sesión</Button>
+              <Button as={Link} to="/registro" className="btn-registrarse">Registrarse</Button>
           </div>
         </Navbar.Collapse>
       </Container>

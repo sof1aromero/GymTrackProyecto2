@@ -1,99 +1,82 @@
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Fondo claro para toda la pantalla */
+.registro-container {
+  background-color: #f8f9fa;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Caja del formulario: ocupa 90% del ancho en pantallas pequeñas, máx. 800px */
+.registro-box {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
 }
 
-.titulo {
+/* Título */
+.titulo-registro {
+  font-size: 28px;
   text-align: center;
-  font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  color: #333;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
+/* Campos */
+.campo-registro {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.campo-registro label {
   display: block;
-  margin: 0 auto;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
 }
 
-.formulario {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 7px 10px 9px rgba(0, 0, 0, 0.2);
+.campo-registro input,
+.campo-registro select {
   width: 100%;
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.campo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.campo label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.campo input,
-.campo select {
-  padding: 10px;
+  padding: 12px;
+  font-size: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
+  border-radius: 8px;
+  background-color: #eeeeee; /* gris claro suave */
+  color: #333;
 }
 
-.campo select {
-  cursor: pointer;
-}
-
-.btnRegistrar {
-  background-color: #505050;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
+/* Botón de registrar */
+.btn-registrar {
+  width: 100%;
+  padding: 12px;
   margin-top: 10px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btnRegistrar:hover {
-  background-color: #272727;
-}
-
-.opciones {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.opciones a {
-  color: #007bff;
-  text-decoration: none;
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
   font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
 }
 
-.opciones a:hover {
-  text-decoration: underline;
+.btn-registrar:hover {
+  opacity: 0.9;
 }
 
-.footer {
+/* Enlace para iniciar sesión */
+.link-login {
+  color: #333;
+  text-align: center;
   margin-top: 20px;
   font-size: 14px;
-  text-align: center;
+}
+
+.link-login a {
+  text-decoration: underline;
+  color: #2cd3cf;
 }

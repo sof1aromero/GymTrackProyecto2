@@ -1,5 +1,3 @@
-/* src/components/NavbarLanding.css */
-
 .btn-login {
   background-color: black;
   color: white;
@@ -31,6 +29,11 @@
 }
 
 .navbar-center-links .nav-link {
-  font-size: 1.1rem;      /* Aumenta el tamaño de letra */
-  color: black !important; /* Fuerza el color negro */
+  font-size: 1.1rem;      
+  color: black !important; 
+}
+
+.login-box{
+  background: transparent;
+  box-shadow: none;
 }
