@@ -16,6 +16,9 @@ import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
 import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
 import CarteraPagos from "./components/Entrenador/CarteraPagos";
 import PerfilEntrenador from "./components/Entrenador/PerfilEntrenador";
+import InicioInformativo from "./components/Visualizacion/InicioInformativo";
+import ServiciosGymVisu from "./components/Visualizacion/ServiciosGymVisu";
+import VisitarGym from "./components/Visualizacion/Visitar";
 
 function App() {
   return (
@@ -23,24 +26,31 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path="/" element={<IniciarSesion />} />
+        <Route
+          path="/"element={
+            <>
+              <InicioInformativo />
+              <ServiciosGymVisu /> 
+              <VisitarGym />
+            </>
+          }
+        />
         <Route path="/registro" element={<Registro />} />
         <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
         <Route path="/iniciar-sesion" element={<IniciarSesion />} />
         <Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
         <Route path="/calendario" element={<CalendarioCliente />} />
         <Route path="/historial-clases" element={<HistorialClases />} />
-        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
+        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva />} />
         <Route path="/admin" element={<DashboardAdmin />} />
-        <Route path="/admin/inicio" element={<InicioAdmin />}/>
-        <Route path="/entrenador" element={<DashboardEntrenador />}/>
-        <Route path="/entrenador/inicio" element={<InicioEntrenador />}/>
-        <Route path="/entrenador/calendario" element={<CalendarioEntrenador />}/>
-        <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />}/>
-        <Route path="/entrenador/perfil-entrenador" element={<PerfilEntrenador />}/>
+        <Route path="/admin/inicio" element={<InicioAdmin />} />
+        <Route path="/entrenador" element={<DashboardEntrenador />} />
+        <Route path="/entrenador/inicio" element={<InicioEntrenador />} />
+        <Route path="/entrenador/calendario" element={<CalendarioEntrenador />} />
+        <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />} />
+        <Route path="/entrenador/perfil-entrenador" element={<PerfilEntrenador />} />
+      </Routes>
 
-        </Routes>
-        
     </>
   );
 }
