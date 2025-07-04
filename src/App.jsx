@@ -13,6 +13,18 @@ import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
 import DashboardAdmin from "./components/Administrador/DashboardAdmin";
 import InicioAdmin from "./components/Administrador/InicioAdmin";
+import DashboardEntrenador from "./components/Entrenador/DashboardEntrenador";
+import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
+import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
+import CarteraPagos from "./components/Entrenador/CarteraPagos";
+import PerfilEntrenador from "./components/Entrenador/PerfilEntrenador";
+import InicioInformativo from "./components/Visualizacion/InicioInformativo";
+import ServiciosGymVisu from "./components/Visualizacion/ServiciosGymVisu";
+import VisitarGym from "./components/Visualizacion/Visitar";
+import SeccionClases from "./components/ClasesCliente/SeccionClases";
+import AgendarClase from "./components/ClasesCliente/AgendarClase";
+import DetallesServicio from "./components/serviciosCliente/DetallesServicio";
+import VerMasServicios from "./components/serviciosCliente/VerMasServicios";
 
 function App() {
   const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
@@ -23,20 +35,54 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <>
-      <NavBar />
+    <BrowserRouter>
+      {/* NavBar según sesión */}
+      {isAuthenticated ? <NavBarPriv /> : <NavBar />}
 
-      <Routes>
-        <Route path="/" element={<IniciarSesion />} />
-        <Route path="/registro" element={<Registro />} />
-        <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
-        <Route path="/iniciar-sesion" element={<IniciarSesion />} />
-        <Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
-        <Route path="/calendario" element={<CalendarioCliente />} />
-        <Route path="/historial-clases" element={<HistorialClases />} />
-        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
-        <Route path="/admin" element={<DashboardAdmin />} />
-        <Route path="/admin/inicio" element={<InicioAdmin />}/>
+      <div className="app-layout">
+        <Routes>
+
+          <Route
+            path="/"
+            element={
+              isAuthenticated ? (
+                <InicioClienteServicios />
+              ) : (
+                <>
+                  <InicioInformativo />
+                  <ServiciosGymVisu />
+                  <VisitarGym />
+                </>
+              )
+            }
+          />
+
+          {/* Rutas públicas */}
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
+          <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+          <Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
+
+          {/* Cliente */}
+          <Route path="/calendario" element={<CalendarioCliente />} />
+          <Route path="/historial-clases" element={<HistorialClases />} />
+          <Route path="/confirmacion-reserva" element={<ConfirmacionReserva />} />
+          <Route path="/cliente/inicio" element={<InicioClienteServicios />} />
+          <Route path="/cliente/clases" element={<SeccionClases />} />
+          <Route path="/cliente/clases/agendar" element={<AgendarClase />} />
+          <Route path="/cliente/detalles" element={<DetallesServicio />} />
+          <Route path="/cliente/servicios" element={<VerMasServicios />} />
+
+          {/* Admin */}
+          <Route path="/admin" element={<DashboardAdmin />} />
+          <Route path="/admin/inicio" element={<InicioAdmin />} />
+
+          {/* Entrenador */}
+          <Route path="/entrenador" element={<DashboardEntrenador />} />
+          <Route path="/entrenador/inicio" element={<InicioEntrenador />} />
+          <Route path="/entrenador/calendario" element={<CalendarioEntrenador />} />
+          <Route path="/entrenador/cartera-pagos" element={<CarteraPagos />} />
+          <Route path="/entrenador/perfil-entrenador" element={<PerfilEntrenador />} />
         </Routes>
 
         <Footer />
