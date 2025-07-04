@@ -1,11 +1,9 @@
 import "../../styles/InicioSesion/IniciarSesion.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Footer from "../InicioSesionFN/Footer"; // Asegúrate de que la ruta sea correcta
 
-function IniciarSesion({ onLogin }) {
+function IniciarSesion() {
   const navigate = useNavigate();
-
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [documento, setDocumento] = useState("");
   const [password, setPassword] = useState("");
@@ -18,12 +16,16 @@ function IniciarSesion({ onLogin }) {
       return;
     }
 
+    // Simulación de autenticación
     if (documento === "12345678" && password === "12345678") {
-      localStorage.setItem("authToken", "fake_token");
-      navigate("/admin");
-    } else {
-      alert("Credenciales incorrectas");
-    }
+    localStorage.setItem("authToken", "fake_token");
+    localStorage.setItem("isAuthenticated", "true"); // 👈 Marca que el usuario ha iniciado sesión
+    navigate("/cliente/inicio"); // 👈 Redirige
+    window.location.reload();    // 👈 Recarga para que App.jsx detecte la sesión activa
+  } else {
+    alert("Credenciales incorrectas");
+  }
+
   };
 
   return (
@@ -37,7 +39,6 @@ function IniciarSesion({ onLogin }) {
               <label htmlFor="tipoDocumento">Tipo de documento</label>
               <select
                 id="tipoDocumento"
-                name="tipoDocumento"
                 value={tipoDocumento}
                 onChange={(e) => setTipoDocumento(e.target.value)}
                 required
@@ -55,10 +56,9 @@ function IniciarSesion({ onLogin }) {
               <input
                 type="text"
                 id="documento"
-                name="documento"
-                placeholder="Ingrese su documento"
                 value={documento}
                 onChange={(e) => setDocumento(e.target.value)}
+                placeholder="Ingrese su documento"
                 required
               />
             </div>
@@ -68,12 +68,11 @@ function IniciarSesion({ onLogin }) {
               <input
                 type="password"
                 id="password"
-                name="password"
-                minLength="8"
-                placeholder="Mínimo 8 caracteres"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                placeholder="Mínimo 8 caracteres"
                 required
+                minLength={8}
               />
             </div>
 
@@ -96,7 +95,6 @@ function IniciarSesion({ onLogin }) {
         </section>
       </div>
 
-      <Footer />
     </div>
   );
 }

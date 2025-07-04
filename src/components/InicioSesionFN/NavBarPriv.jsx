@@ -1,56 +1,57 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
-import LogoGymTrack from "../../img/logo.png";
-import MenuUsuario from "../Cliente/MenuUsuario";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import MenuNotificaciones from "../ClienteNotificaciones/MenuNotificaciones";
-import React, { useState } from "react"; 
-import { useNavigate } from "react-router-dom"
+import { FaBell, FaBars } from "react-icons/fa";
+import "../../styles/InicioSesionFN/NavBarPriv.css";
 
 const NavBarPriv = () => {
-    const navigate = useNavigate();
-    const [showNotifications, setShowNotifications] = useState(false);
+  const [showNotifications, setShowNotifications] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [tieneNotificaciones, setTieneNotificaciones] = useState(true); // 🔴 Punto rojo
 
-    const notificaciones = [
-        { tipo: "pago", texto: "Tu pago de abril está pendiente." },
-        { tipo: "clase", texto: "Tienes una clase programada mañana." },
-        { tipo: "alerta", texto: "Tu membresía expira en 3 días." },
-    ];
+  const toggleNotification = () => {
+    setShowNotifications(!showNotifications);
+    setTieneNotificaciones(false); // Oculta 🔴 al abrir
+  };
 
-    const handleVerTodasNotificaciones = () => {
-        navigate("/centro-notificaciones");
-    };
-    return (
-        <Navbar expand="lg" className="border p-2 position-relative">
-            <Container className="d-flex justify-content-between align-items-center">
-                <Navbar.Brand href="/">
-                    <img
-                        src={LogoGymTrack}
-                        alt="GymTrack Logo"
-                        height="240"
-                        className="d-inline-block align-top"
-                    />
-                </Navbar.Brand>
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
-                <Nav className="d-flex gap-4 nav-links">
-                    <Link to="/mis-servicios" className="fw-semibold text-decoration-underline nav-link mx-3">
-                        Mis Servicios
-                    </Link>
-                    <Link to="/entrenadores" className="fw-semibold nav-link">
-                        Entrenadores
-                    </Link>
-                    <Link to="/pagos" className="fw-semibold nav-link">
-                        Mis Pagos
-                    </Link>
-                </Nav>
+  return (
+    <nav className="navbar-priv">
+      <div className="navbar-logo">GYM TRACK</div>
 
-                <MenuNotificaciones
-                    notificaciones={notificaciones}
-                    onVerTodas={() => navigate("/notificaciones")}
-                />
-                <MenuUsuario />
-            </Container>
-        </Navbar>
-    );
+      <div className="navbar-links">
+        <Link to="/cliente/inicio" className="nav-link">Mis Servicios</Link>
+        <Link to="/cliente/pagos" className="nav-link">Mis Pagos</Link>
+      </div>
+
+      <div className="navbar-icons">
+        {/* 🔔 Notificación */}
+        <div className="icon-wrapper" onClick={toggleNotification}>
+          <FaBell className="icon" />
+          {tieneNotificaciones && <span className="notification-dot" />}
+          {showNotifications && (
+            <div className="dropdown">
+              <p>No tienes notificaciones nuevas.</p>
+            </div>
+          )}
+        </div>
+
+        {/* ☰ Menú */}
+        <div className="icon-wrapper" onClick={toggleMenu}>
+          <FaBars className="icon" />
+          {showMenu && (
+            <div className="dropdown">
+              <Link to="/cliente/perfil">Perfil</Link>
+              <Link to="/cliente/configuracion">Configuración</Link>
+              <Link to="/logout">Cerrar sesión</Link>
+            </div>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default NavBarPriv;

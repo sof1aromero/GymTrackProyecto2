@@ -1,0 +1,100 @@
+.services-container {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  background: #f6f6f6;
+  border: 6px solid #539694;
+  border-radius: 20px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 8px;
+}
+
+.status-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status-circle.green {
+  background-color: green;
+}
+
+.status-circle.yellow {
+  background-color: #f2cb05;
+}
+
+.status-circle.red {
+  background-color: red;
+}
+
+.status-text {
+  font-weight: bold;
+}
+
+.cancel-reason {
+  color: #9d0e0e;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  opacity: 0.9;
+}
+
+.ver-mas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ver-mas-btn {
+  background-color: #2cd3cf;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.ver-mas-btn:hover {
+  opacity: 0.9;
+}
