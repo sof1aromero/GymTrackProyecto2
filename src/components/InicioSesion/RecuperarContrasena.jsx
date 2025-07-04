@@ -1,78 +1,78 @@
-import "../../styles/InicioSesion/RecuperarContrasena.css"; 
-import { Link, useNavigate } from "react-router-dom";
+// RecuperarContrasena.jsx
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../../styles/InicioSesion/RecuperarContrasena.css";
 
 function RecuperarContrasena() {
-  const [correo, setCorreo] = useState("");
-  const [codigo, setCodigo] = useState("");
   const navigate = useNavigate();
+  const [fase, setFase] = useState(1);
+  const [email, setEmail] = useState("");
+  const [password1, setPassword1] = useState("");
+  const [password2, setPassword2] = useState("");
+  const [mensaje, setMensaje] = useState("");
 
-  const generarCodigo = () => {
-    if (!correo.trim()) {
-      alert("Por favor, ingresa un correo electrónico.");
+  const handleEnviar = (e) => {
+    e.preventDefault();
+    if (!email) {
+      setMensaje("Por favor ingrese su correo.");
       return;
     }
-
-    const nuevoCodigo = Math.floor(100000 + Math.random() * 900000);
-    setCodigo(nuevoCodigo.toString());
+    setMensaje("");
+    setFase(2);
   };
 
-  const confirmarCodigo = () => {
-    if (!codigo) {
-      alert("Debes generar un código primero.");
+  const handleCambiar = (e) => {
+    e.preventDefault();
+    if (!password1 || !password2) {
+      setMensaje("Completa ambos campos.");
       return;
     }
-
-    navigate("/cambiar-contrasena");
+    if (password1 !== password2) {
+      setMensaje("Las contraseñas no coinciden.");
+      return;
+    }
+    setMensaje("✅ Contraseña cambiada con éxito.");
+    setTimeout(() => navigate("/iniciar-sesion"), 2000);
   };
 
   return (
-    <div className="contenedor">
-
-
-      <section className="formulario">
+    <div className="recuperar-page">
+      <div className="recuperar-formulario">
         <h2>Recuperar contraseña</h2>
 
-        <div className="campo">
-          <label htmlFor="correorecuperar">Ingresar el correo electrónico con el que se registró</label>
-          <input
-            type="email"
-            id="correorecuperar"
-            value={correo}
-            onChange={(e) => setCorreo(e.target.value)}
-            placeholder="Correo electrónico"
-            required
-          />
-        </div>
+        {mensaje && <div className="mensaje">{mensaje}</div>}
 
-        <button className="btnConfirmar">Enviar código</button>
-
-        <div className="campo">
-          <label htmlFor="codigorecuperar">Código enviado al correo</label>
-          <div className="grupo-codigo">
+        {fase === 1 ? (
+          <form onSubmit={handleEnviar}>
+            <label>Correo electrónico</label>
             <input
-              type="text"
-              id="codigorecuperar"
-              value={codigo}
-              placeholder="Genera un código"
-              readOnly
+              type="email"
+              value={email}
+              placeholder="Correo electrónico"
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <button type="button" className="btnGenerar" onClick={generarCodigo}>
-              Generar
-            </button>
-          </div>
-        </div>
-
-        <button className="btnReestablecer" onClick={confirmarCodigo}>
-          Confirmar
-        </button>
-
-        <section className="opciones">
-          <p>
-            ¿Ya tienes cuenta? <Link to="/iniciar-sesion">Inicia sesión aquí</Link>
-          </p>
-        </section>
-      </section>
+            <button type="submit">Enviar código</button>
+          </form>
+        ) : (
+          <form onSubmit={handleCambiar}>
+            <label>Ingresa la nueva contraseña</label>
+            <input
+              type="password"
+              value={password1}
+              placeholder="Nueva contraseña"
+              onChange={(e) => setPassword1(e.target.value)}
+            />
+            <label>Confirma la nueva contraseña</label>
+            <input
+              type="password"
+              value={password2}
+              placeholder="Confirmar contraseña"
+              onChange={(e) => setPassword2(e.target.value)}
+            />
+            <button type="submit">Confirmar</button>
+          </form>
+        )}
+      </div>
     </div>
   );
 }

@@ -1,156 +1,65 @@
-.contenedor {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Asegura que el contenido llene toda la altura y el footer se quede abajo */
+.recuperar-page {
   min-height: 100vh;
-  background-color: #ffffff;
-  padding: 20px;
-}
-
-input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  font-size: 14px;
-}
-
-.titulo {
-  text-align: center;
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-.formulario {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 7px 10px 9px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  max-width: 400px;
   display: flex;
   flex-direction: column;
-}
-
-.formulario h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.campo {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-}
-
-.correorecuperar {
-  margin-top: 20px;
-}
-
-.codigorecuperar {
-  margin-top: 20px;
-}
-
-.campo label {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.campo input,
-.campo select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.campo select {
-  cursor: pointer;
-}
-
-.btnReestablecer {
-  background-color: #505050;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btnReestablecer:hover {
-  background-color: #272727;
-}
-
-.opciones {
-  text-align: center;
-  margin-top: 15px;
-}
-
-.opciones a {
-  color: #505050;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.opciones a:hover {
-  text-decoration: underline;
-}
-
-.footer {
-  margin-top: 20px;
-  font-size: 14px;
-  text-align: center;
-}
-
-.btnConfirmar {
-  background-color: #505050;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.btnConfirmar:hover {
-  background-color: #272727;
-}
-
-.grupo-codigo {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  background: #f1f1f1;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
-.grupo-codigo input {
-  flex: 1;
+.recuperar-formulario {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.btnGenerar {
-  background-color: #505050;
+.recuperar-formulario h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.recuperar-formulario label {
+  font-weight: bold;
+  margin-top: 1rem;
+  display: block;
+}
+
+.recuperar-formulario input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.recuperar-formulario button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #00c9b7, #176d6b);
   color: white;
   border: none;
-  padding: 10px 15px;
-  font-size: 14px;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
 }
 
-.btnGenerar:hover {
-  background-color: #272727;
+.recuperar-formulario button:hover {
+  opacity: 0.9;
+}
+
+.mensaje {
+  background-color: #ffeeba;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
 }
