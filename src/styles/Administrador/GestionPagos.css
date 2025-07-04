@@ -5,10 +5,11 @@
 .titulo {
   font-size: 24px;
   font-weight: bold;
+  color:black;
 }
 
 .subtitulo {
-  color: #a0a0a0;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -20,10 +21,10 @@
 }
 
 .card-pago {
-  background: #eee;
+  background: #fcfcfc;
   border-radius: 12px;
   padding: 20px;
-  color: white;
+  color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,19 +35,6 @@
   font-size: 24px;
 }
 
-/* Colores */
-.azul {
-  background: linear-gradient(135deg, #6dd0f1, #9163ec);
-}
-.verde {
-  background: linear-gradient(135deg, #97d399, #007206);
-}
-.morado {
-  background: linear-gradient(135deg, #b1a1cf, #8e6ae2);
-}
-.rojo {
-  background: linear-gradient(135deg, #f5c2c2, #6b0202);
-}
 
 /* Tabs y filtros */
 .filtro-pagos {
@@ -63,7 +51,7 @@
 }
 
 .tabs button {
-  background: #eee;
+  background: #000000;
   border: none;
   padding: 8px 16px;
   border-radius: 20px;
@@ -71,8 +59,8 @@
 }
 
 .tabs .active {
-  background: #ebeff0;
-  color: rgb(0, 0, 0);
+  background: #000000;
+  color: rgb(255, 255, 255);
 }
 
 .filtros {

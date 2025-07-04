@@ -12,7 +12,6 @@ import CalendarioCliente from "./components/ClienteEntrenador/CalendarioCliente"
 import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
 import DashboardAdmin from "./components/Administrador/DashboardAdmin";
-import InicioAdmin from "./components/Administrador/InicioAdmin";
 import DashboardEntrenador from "./components/Entrenador/DashboardEntrenador";
 import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
 import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
@@ -25,9 +24,18 @@ import SeccionClases from "./components/ClasesCliente/SeccionClases";
 import AgendarClase from "./components/ClasesCliente/AgendarClase";
 import DetallesServicio from "./components/serviciosCliente/DetallesServicio";
 import VerMasServicios from "./components/serviciosCliente/VerMasServicios";
+import InicioAdmin from "./components/Administrador/InicioAdmin";
+import RegistroEntrenadores from "./components/Administrador/RegistroEntrenadores";
+import GestionPagos from "./components/Administrador/GestionPagos";
+import PagosClientes from "./components/Administrador/PagosClientes";
+import PagosEntrenadores from "./components/Administrador/PagosEntrenadores";
+import DistribucionEntre from "./components/Administrador/DistribucionEntre";
+import InventarioAdmin from "./components/Administrador/InventarioAdmin";
+
+
 
 function App() {
-  const isAuthenticated = localStorage.getItem("isAuthenticated") === "true";
+  const isAuthenticated = localStorage.getItem("isAuthenticated") === "false";
 
   // 🔍 Solo para depuración en consola
   useEffect(() => {
@@ -35,7 +43,7 @@ function App() {
   }, [isAuthenticated]);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       {/* NavBar según sesión */}
       {isAuthenticated ? <NavBarPriv /> : <NavBar />}
 
@@ -75,8 +83,12 @@ function App() {
 
           {/* Admin */}
           <Route path="/admin" element={<DashboardAdmin />} />
-          <Route path="/admin/inicio" element={<InicioAdmin />} />
-
+        <Route path="/admin/registro" element={<RegistroEntrenadores />}/>
+        <Route path="/admin/pagos" element={<GestionPagos />}/>
+        <Route path="/admin/clientes" element={<PagosClientes />}/>
+        <Route path="/admin/entrenadores" element={<PagosEntrenadores />}/>
+        <Route path="/admin/distribucion" element={<DistribucionEntre />}/>
+        <Route path="/admin/inventario" element={<InventarioAdmin />}/>
           {/* Entrenador */}
           <Route path="/entrenador" element={<DashboardEntrenador />} />
           <Route path="/entrenador/inicio" element={<InicioEntrenador />} />

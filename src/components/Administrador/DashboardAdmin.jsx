@@ -1,11 +1,19 @@
 
-import { Link } from "react-router-dom";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import logo from "/src/img/logo.png"; // Asegúrate de que esta imagen exista
 import "../../styles/Administrador/SidebarAdmin.css"; // Estilos que también te doy ahora
+import InicioAdmin from './InicioAdmin';
 
 const SidebarAdmin = () => {
   return (
-    <aside className="sidebar-admin">
+    
+    <Container>
+      <Row>
+        <Col >
+          <aside className="sidebar-admin">
       <div className="perfil-admin">
         <div className="perfil-icono">
           <i className="fas fa-user-circle"></i>
@@ -30,7 +38,16 @@ const SidebarAdmin = () => {
         <Link to="/login" className="logout-link">Cerrar sesión</Link>
       </nav>
     </aside>
+        </Col>
+        <Col xs={8}>
+          <h1>ADMIN</h1>
+          <Routes>
+            <Route path='' element={<InicioAdmin></InicioAdmin>}></Route>
+          </Routes>
+        </Col>
+      </Row>|
+    </Container>
   );
-};
+}
 
 export default SidebarAdmin;
