@@ -11,6 +11,12 @@ import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
 import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
 import DashboardAdmin from './components/Administrador/DashboardAdmin';
 import InicioAdmin from "./components/Administrador/InicioAdmin";
+import RegistroEntrenadores from "./components/Administrador/RegistroEntrenadores";
+import GestionPagos from "./components/Administrador/GestionPagos";
+import PagosClientes from "./components/Administrador/PagosClientes";
+import PagosEntrenadores from "./components/Administrador/PagosEntrenadores";
+import DistribucionEntre from "./components/Administrador/DistribucionEntre";
+import InvetarioAdmin from "./components/Administrador/InventarioAdmin";
 
 function App() {
   return (
@@ -28,6 +34,12 @@ function App() {
         <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />
         <Route path="/admin" element={<DashboardAdmin />} />
         <Route path="/admin/inicio" element={<InicioAdmin />}/>
+        <Route path="/admin/registro" element={<RegistroEntrenadores />}/>
+        <Route path="/admin/pagos" element={<GestionPagos />}/>
+        <Route path="/admin/clientes" element={<PagosClientes />}/>
+        <Route path="/admin/entrenadores" element={<PagosEntrenadores />}/>
+        <Route path="/admin/distribucion" element={<DistribucionEntre />}/>
+        <Route path="/admin/inventario" element={<InvetarioAdmin />}/>
         </Routes>
         
     </>
