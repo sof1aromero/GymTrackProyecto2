@@ -24,6 +24,9 @@ const SidebarAdmin = () => {
         <Link to="/admin/miembros" className="nav-link">Ver Miembros</Link>
         <Link to="/admin/coaches" className="nav-link">Entrenadores</Link>
         <Link to="/admin/reportes" className="nav-link">Reportes</Link>
+        <Link to="/admin/clientes" className="nav-link">Pagos Clientes</Link>
+        <Link to="/admin/entrenadores" className="nav-link">Pagos Entrenadores</Link>
+        <Link to="/admin/distribucion" className="nav-link">Distribucion Entrenadores</Link>
         <Link to="/login" className="logout-link">Cerrar sesión</Link>
       </nav>
     </aside>
