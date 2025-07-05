@@ -1,0 +1,88 @@
+.agendar-clase-container {
+  padding: 40px 20px 80px; /* Aumentado padding inferior */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Para empujar el footer hacia abajo */
+}
+
+.card-agendar {
+  background-color: white;
+  border: 2px solid transparent; /* Borde más delgado */
+  border-radius: 16px;
+  padding: 4px; /* Más padding interno */
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+  background-image: linear-gradient(white, white), 
+                    linear-gradient(to right, #2cd3cf, #176d6b);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+  margin-bottom: 30px; /* Espacio entre la card y el botón */
+  transition: transform 0.3s ease; /* Efecto hover */
+  
+}
+
+.card-agendar:hover {
+  transform: translateY(-5px); /* Efecto al pasar el mouse */
+}
+
+.card-agendar h2 {
+  font-size: 32px; /* Título más grande */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #176d6b;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Sutil sombra en el texto */
+}
+
+.card-agendar p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.btn-ver-horarios {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(44, 211, 207, 0.3); /* Sombra para el botón */
+  margin-bottom: 20px;
+}
+
+.btn-ver-horarios:hover {
+  opacity: 0.95;
+  transform: scale(1.02); /* Efecto de crecimiento al hover */
+  box-shadow: 0 6px 20px rgba(44, 211, 207, 0.4);
+}
+
+.volver-clases {
+  margin-top: auto; /* Empuja el botón hacia el final */
+  padding: 20px 0;
+}
+
+.btn-volver-clases {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(44, 211, 207, 0.3);
+}
+
+.btn-volver-clases:hover {
+  opacity: 0.95;
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(44, 211, 207, 0.4);
+}

@@ -1,11 +1,14 @@
-.custom-navbar {
-    height: 80px; /* más alto */
+html, body, #root {
+  height: 100%;
+  margin: 0;
 }
 
-.nav-links .nav-link {
-  font-size: 1.3rem; /* letras más grandes */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.navbar-brand img {
-    max-height: 100px;
+.app-layout > main {
+  flex-grow: 1;
 }

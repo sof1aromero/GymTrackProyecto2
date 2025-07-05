@@ -1,0 +1,59 @@
+.visit-gym-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  background: url('../../img/fondomapa.png') no-repeat center center/cover;
+  padding: 40px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.map-container {
+  flex: 1;
+}
+
+.map-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+}
+
+.info-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 25px 30px;
+  border-radius: 20px;
+  max-width: 400px;
+}
+
+.info-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.label {
+  font-weight: bold;
+  color: #d2f1f5;
+}
+
+.socials {
+  margin-top: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icons svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icons svg:hover {
+  transform: scale(1.2);
+}

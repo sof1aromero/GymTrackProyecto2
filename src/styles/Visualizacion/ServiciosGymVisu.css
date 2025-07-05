@@ -1,0 +1,97 @@
+.contenedor-servicios {
+  padding: 40px;
+  background: #f7f9fc;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #17696d 0%, #0a6c74 50%, #17696d 50%);
+}
+
+h2 {
+  color: #000000;         
+  font-weight: 900;       
+  font-size: 2rem;        
+  margin-bottom: 40px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  justify-items: center;
+}
+
+.card-servicio {
+  background: white;
+  border: 2px solid #d1f0f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  width: 280px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.card-servicio:hover {
+  transform: translateY(-5px);
+}
+
+.card-servicio h3 {
+  color: #0a6c74;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.card-servicio .descripcion {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.card-servicio ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card-servicio .precio {
+  font-weight: bold;
+  color: #1a4e4f;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.btn {
+  background: linear-gradient(90deg, #2CD3CF, #176D6B);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0fa390;
+}
+
+.nota {
+  font-weight: 900;       
+  font-size: 1rem;  
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+
+@media (max-width: 900px) {
+  .grid-servicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+}

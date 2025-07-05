@@ -1,0 +1,147 @@
+:root {
+    --sidebar-bg: #0b3c49; /* Azul profundo más moderno */
+    --sidebar-text-color: #ecf0f1;
+    --sidebar-accent-color: #00bcd4; /* Un azul brillante más vibrante */
+    --sidebar-hover-bg: #155f6b;
+    --sidebar-border-color: rgba(255, 255, 255, 0.05);
+    --font-family-primary: 'Poppins', sans-serif;
+    --logo-width: 110px;
+  }
+  
+  body {
+    font-family: var(--font-family-primary);
+    margin: 0;
+    background-color: #f4f6f8;
+  }
+  
+  /* Sidebar principal */
+  .sidebar-admin {
+    width: 250px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text-color);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Logo */
+  .logo-sidebar {
+    width: var(--logo-width);
+    margin: 0 auto 20px;
+    display: block;
+    opacity: 0.95;
+    transition: transform 0.3s ease;
+  }
+  .logo-sidebar:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Perfil */
+  .perfil-admin {
+    text-align: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid var(--sidebar-border-color);
+    padding-bottom: 20px;
+  }
+  .perfil-icono .fas {
+    font-size: 60px;
+    color: var(--sidebar-accent-color);
+    margin-bottom: 10px;
+  }
+  .perfil-rol {
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  .perfil-email {
+    font-size: 0.9em;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  /* Menú */
+  .nav-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: var(--sidebar-text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  .nav-link:hover {
+    background-color: var(--sidebar-hover-bg);
+    transform: translateX(6px);
+  }
+  .nav-link i {
+    margin-right: 10px;
+    color: var(--sidebar-accent-color);
+  }
+  .nav-link:hover i {
+    color: white;
+  }
+  
+  /* Enlace activo */
+  .nav-link.active {
+    background-color: var(--sidebar-accent-color);
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Cerrar sesión */
+  .logout-link {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--sidebar-border-color);
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+  }
+  .logout-link:hover {
+    background-color: rgba(231, 76, 60, 0.2);
+    color: white;
+  }
+  .logout-link i {
+    margin-right: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar-admin {
+      flex-direction: row;
+      flex-wrap: wrap;
+      height: auto;
+      width: 100%;
+      justify-content: center;
+      padding: 15px;
+      position: relative;
+    }
+    .perfil-admin {
+      display: none;
+    }
+    .nav-sidebar {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .nav-link {
+      font-size: 0.9em;
+      padding: 8px 10px;
+    }
+    .logo-sidebar {
+      width: 70px;
+    }
+  }

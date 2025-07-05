@@ -1,0 +1,82 @@
+/* Fondo claro para toda la pantalla */
+.registro-container {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* Caja del formulario: ocupa 90% del ancho en pantallas pequeñas, máx. 800px */
+.registro-box {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+/* Título */
+.titulo-registro {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Campos */
+.campo-registro {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.campo-registro label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.campo-registro input,
+.campo-registro select {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #eeeeee; /* gris claro suave */
+  color: #333;
+}
+
+/* Botón de registrar */
+.btn-registrar {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-registrar:hover {
+  opacity: 0.9;
+}
+
+/* Enlace para iniciar sesión */
+.link-login {
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link-login a {
+  text-decoration: underline;
+  color: #2cd3cf;
+}

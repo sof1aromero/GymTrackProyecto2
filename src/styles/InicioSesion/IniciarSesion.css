@@ -1,0 +1,89 @@
+.login-cliente-container {
+  background-image: url("/imagCouple.jpg");
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.login-overlay {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.login-box {
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.login-title {
+  text-align: left;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.campo,
+.campoDoc,
+.campoPass {
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  background-color: #eee;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.btnIniciarSesion {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #2cd3cf, #176d6b);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btnIniciarSesion:hover {
+  opacity: 0.9;
+}
+
+.login-links p,
+.login-links a {
+  color: #333;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+.login-links a {
+  text-decoration: underline;
+  color: white;
+}
+
+.recordar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
