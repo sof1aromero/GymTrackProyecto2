@@ -7,24 +7,13 @@ const GestionPagos = () => {
       <p className="subtitulo">Administra los pagos de clientes y la distribución de comisiones</p>
 
       <div className="resumen-pagos">
-        <div className="card-pago azul">
-          <p>Ingresos Totales</p>
-          <i className="fas fa-dollar-sign"></i>
-        </div>
-        <div className="card-pago verde">
-          <p>Ganancia Gimnasio</p>
-          <i className="fas fa-chart-line"></i>
-        </div>
-        <div className="card-pago morado">
-          <p>Pago Entrenadores</p>
-          <i className="fas fa-user"></i>
-        </div>
-        <div className="card-pago rojo">
-          <p>Clientes activos</p>
-          <i className="fas fa-users"></i>
-        </div>
+                <div className="card-info c1">Clientes activos</div>
+        <div className="card-info c2">Pago entrenadores</div>
+        <div className="card-info c3">Ganancia Gimnasio</div>
+        <div className="card-info c4">Ingresos Totales </div>
       </div>
 
+    
       <div className="filtro-pagos">
         <div className="tabs">
           <button className="active">Pagos de Clientes</button>

@@ -18,7 +18,7 @@ function IniciarSesion() {
 
     // Simulación de autenticación
     if (documento === "12345678" && password === "12345678") {
-    localStorage.setItem("isAuthenticated", "true"); // 👈 Marca que el usuario ha iniciado sesión
+    localStorage.setItem("isAuthenticated", "false"); // 👈 Marca que el usuario ha iniciado sesión
     navigate("/cliente/inicio"); // 👈 Redirige
     window.location.reload();    // 👈 Recarga para que App.jsx detecte la sesión activa
   } else {
@@ -30,7 +30,7 @@ function IniciarSesion() {
   return (
     <div className="login-cliente-container">
       <div className="login-overlay">
-        <section className="formulario login-box">
+        <section className=" login-box">
           <h2 className="login-title">Inicia Sesión</h2>
 
           <form onSubmit={handleLoginSubmit}>

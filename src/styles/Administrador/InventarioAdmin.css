@@ -31,7 +31,7 @@
 
 /* Colores personalizados */
 .c1 {
-  background: linear-gradient(to right, #44c2e6, #0f4faf);
+  background: linear-gradient(to right, #77cbe2, #0f4faf);
 }
 
 .c2 {
@@ -39,11 +39,11 @@
 }
 
 .c3 {
-  background: linear-gradient(to right, #7c4dff, #3f51b5);
+  background: linear-gradient(to right, #988db6, #3f51b5);
 }
 
 .c4 {
-  background: linear-gradient(to right, #ef5350, #d32f2f);
+  background: linear-gradient(to right, #e99b99, #d32f2f);
 }
 
 /* Filtros */
