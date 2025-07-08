@@ -14,44 +14,29 @@ html, body {
   padding: 0;
   height: 100%;
   background-color: #f4f6f8;
-  overflow-x: hidden; /* ✅ Previene scroll lateral */
+  overflow-x: hidden;
 }
 
 /* Layout principal */
 .layout-entrenador {
-  display: flex;
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar + Contenido */
   min-height: 100vh;
 }
 
 /* Sidebar */
 .sidebar-entrenador {
-  width: 250px;
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text-color);
   display: flex;
   flex-direction: column;
   padding: 30px 20px;
-  flex-shrink: 0;
   height: 100vh;
   position: sticky;
   top: 0;
   left: 0;
-  overflow-y: hidden; /* ✅ Evita el slide innecesario */
+  overflow-y: hidden;
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Contenido principal */
-.main-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.main-content > .contenido-pagina {
-  flex: 1;
-  padding: 30px;
-  overflow-y: auto;
 }
 
 /* Logo */
@@ -62,6 +47,7 @@ html, body {
   opacity: 0.95;
   transition: transform 0.3s ease;
 }
+
 .logo-sidebar:hover {
   transform: scale(1.05);
 }
@@ -73,15 +59,18 @@ html, body {
   border-bottom: 1px solid var(--sidebar-border-color);
   padding-bottom: 20px;
 }
+
 .perfil-icono .fas {
   font-size: 60px;
   color: var(--sidebar-accent-color);
   margin-bottom: 10px;
 }
+
 .perfil-rol {
   font-weight: 700;
   font-size: 1.2em;
 }
+
 .perfil-email {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.6);
@@ -93,6 +82,7 @@ html, body {
   flex-direction: column;
   gap: 10px;
 }
+
 .nav-link {
   display: flex;
   align-items: center;
@@ -103,17 +93,21 @@ html, body {
   font-weight: 500;
   transition: all 0.2s ease;
 }
+
 .nav-link:hover {
   background-color: var(--sidebar-hover-bg);
   transform: translateX(6px);
 }
+
 .nav-link i {
   margin-right: 10px;
   color: var(--sidebar-accent-color);
 }
+
 .nav-link:hover i {
   color: white;
 }
+
 .nav-link.active {
   background-color: var(--sidebar-accent-color);
   color: white;
@@ -132,12 +126,29 @@ html, body {
   align-items: center;
   transition: all 0.2s ease;
 }
+
 .logout-link:hover {
   background-color: rgba(231, 76, 60, 0.2);
   color: white;
 }
+
 .logout-link i {
   margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 30px;
+  overflow-y: auto;
+  background-color: #f4f6f8;
+}
+
+.main-content > .contenido-pagina {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* Footer */
@@ -162,6 +173,7 @@ html, body {
   color: white;
   transition: transform 0.2s ease;
 }
+
 .footer-entrenador .social-icons i:hover {
   transform: scale(1.2);
 }
@@ -169,7 +181,7 @@ html, body {
 /* Responsive */
 @media (max-width: 768px) {
   .layout-entrenador {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Pila en columna */
   }
 
   .sidebar-entrenador {
@@ -202,3 +214,5 @@ html, body {
     width: 70px;
   }
 }
+
+

@@ -8,6 +8,13 @@ function IniciarSesion() {
   const [documento, setDocumento] = useState("");
   const [password, setPassword] = useState("");
 
+  // Usuarios simulados
+  const usuarios = [
+    { documento: "12345678", password: "12345678", rol: "cliente" },
+    { documento: "123456789", password: "123456789", rol: "entrenador" },
+    { documento: "1234567890", password: "1234567890", rol: "admin" }
+  ];
+
   const handleLoginSubmit = (e) => {
     e.preventDefault();
 
@@ -16,21 +23,29 @@ function IniciarSesion() {
       return;
     }
 
-    // Simulación de autenticación
-    if (documento === "12345678" && password === "12345678") {
-    localStorage.setItem("isAuthenticated", "false"); // 👈 Marca que el usuario ha iniciado sesión
-    navigate("/cliente/inicio"); // 👈 Redirige
-    window.location.reload();    // 👈 Recarga para que App.jsx detecte la sesión activa
-  } else {
-    alert("Credenciales incorrectas");
-  }
+    const usuario = usuarios.find(
+      (u) => u.documento === documento && u.password === password
+    );
 
+    if (usuario) {
+      localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("rol", usuario.rol);
+
+      // Redirigir según el rol
+      if (usuario.rol === "cliente") navigate("/cliente/inicio");
+      else if (usuario.rol === "entrenador") navigate("/entrenador");
+      else if (usuario.rol === "admin") navigate("/admin");
+
+      window.location.reload();
+    } else {
+      alert("Credenciales incorrectas");
+    }
   };
 
   return (
     <div className="login-cliente-container">
       <div className="login-overlay">
-        <section className=" login-box">
+        <section className="login-box">
           <h2 className="login-title">Inicia Sesión</h2>
 
           <form onSubmit={handleLoginSubmit}>
@@ -87,13 +102,10 @@ function IniciarSesion() {
 
           <section className="opciones login-links">
             <p>¿No tienes cuenta? <Link to="/registro">Regístrate aquí</Link></p>
-            <p>
-              <Link to="/recuperar-contrasena">Olvidé mi contraseña</Link>
-            </p>
+            <p><Link to="/recuperar-contrasena">Olvidé mi contraseña</Link></p>
           </section>
         </section>
       </div>
-
     </div>
   );
 }
