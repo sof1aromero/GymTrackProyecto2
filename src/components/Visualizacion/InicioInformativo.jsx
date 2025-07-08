@@ -2,10 +2,15 @@ import React from 'react';
 import '../../styles/Visualizacion/InicioInformativo.css';
 import logo from '/src/img/logotrans.png';
 import chicaFitness from '/src/img/chica-fitness.png';
+import { Navbar } from 'react-bootstrap';
+import NavbarLanding from '../InicioSesionFN/NavBar';
 
 const InicioInformativo = () => {
   return (
+    <>  
+     <NavbarLanding/>
     <div className="inicio-informativo">
+      
       <div className="imagen-encabezado">
         <img src={logo} alt="GymTrack Logo" className="logo-inicio" />
       </div>
@@ -40,6 +45,7 @@ const InicioInformativo = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

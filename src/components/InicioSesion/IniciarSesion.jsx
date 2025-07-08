@@ -1,8 +1,10 @@
 import "../../styles/InicioSesion/IniciarSesion.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import NavbarLanding from "../InicioSesionFN/NavBar";
 
 function IniciarSesion() {
+  
   const navigate = useNavigate();
   const [tipoDocumento, setTipoDocumento] = useState("");
   const [documento, setDocumento] = useState("");
@@ -32,7 +34,7 @@ function IniciarSesion() {
       localStorage.setItem("rol", usuario.rol);
 
       // Redirigir según el rol
-      if (usuario.rol === "cliente") navigate("/cliente/inicio");
+      if (usuario.rol === "cliente") navigate("/cliente");
       else if (usuario.rol === "entrenador") navigate("/entrenador");
       else if (usuario.rol === "admin") navigate("/admin");
 
@@ -43,6 +45,8 @@ function IniciarSesion() {
   };
 
   return (
+    <>
+    <NavbarLanding/>
     <div className="login-cliente-container">
       <div className="login-overlay">
         <section className="login-box">
@@ -107,6 +111,7 @@ function IniciarSesion() {
         </section>
       </div>
     </div>
+    </>
   );
 }
 

@@ -1,39 +1,49 @@
-import { NavLink, Outlet } from "react-router-dom";
-import logo from "/src/img/logo.png";
-import "../../styles/Entrenador/DashboardEntrenador.css";
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import logo from "/src/img/logo.png"; // Asegúrate de que esta imagen exista
+import "../../styles/Entrenador/DashboardEntrenador.css"; // Estilos que también te doy ahora
+import InicioEntrenador from './InicioEntrenador';
 
 const DashboardEntrenador = () => {
   return (
-
-    <div className="layout-entrenador">
-      
-      <aside className="sidebar-entrenador">
-        <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
-        <div className="perfil-entrenador">
-          <div className="perfil-icono">
-            <i className="fas fa-user-circle"></i>
-          </div>
-          <p className="perfil-rol">Perfil Entrenador</p>
-          <p className="perfil-email">entrenador@gymtrack.com</p>
+    
+    <div className="dashboard-entrenador">
+      <Row>
+        <Col xs={2} >
+          <aside className="sidebar-admin">
+      <div className="perfil-entrenador">
+        <div className="perfil-icono">
+          <i className="fas fa-user-circle"></i>
         </div>
+        <p className="perfil-rol">Perfil Entrenadorr</p>
+        <p className="perfil-email">entrenador@gymtrack.com</p>
+      </div>
 
-        <nav className="nav-sidebar">
-          <NavLink to="/entrenador/inicio" className="nav-link">Inicio</NavLink>
-          <NavLink to="/entrenador/calendario" className="nav-link">Calendario</NavLink>
-          <NavLink to="/entrenador/cartera-pagos" className="nav-link">Cartera de Pagos</NavLink>
-          <NavLink to="/entrenador/perfil-entrenador" className="nav-link">Perfil</NavLink>
-          <NavLink to="/entrenador/notificaciones-entrenador" className="nav-link">Notificaciones</NavLink>
-          <a href="/login" className="logout-link">Cerrar sesión</a>
-        </nav>
-      </aside>
+      <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
 
-      <main className="main-content">
-        <div className="contenido-pagina">
-          <Outlet />
-        </div>
-      </main>
+      <nav className="nav-sidebar">
+        <Link to="/entrenador" className="nav-link">Inicio</Link>
+        <Link to="/entrenador/calendario" className="nav-link">Calendario</Link>
+        <Link to="/entrenador/cartera-pagos" className="nav-link">Pagos</Link>
+        <Link to="/entrenador/perfil" className="nav-link">Perfil</Link>
+        <Link to="/entrenador/notificaciones" className="nav-link">Notificaciones</Link>
+        <Link to="/login" className="logout-link">Cerrar sesión</Link>
+      </nav>
+    </aside>
+        </Col>
+        <Col >
+
+          <Routes>
+            <Route path='' element={<InicioEntrenador/>}></Route>
+
+          </Routes>
+        </Col>
+      </Row>
     </div>
   );
-};
+}
 
 export default DashboardEntrenador;

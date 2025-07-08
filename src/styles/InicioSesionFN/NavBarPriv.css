@@ -3,6 +3,11 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.contenedor-cliente{
+  position: sticky;
+
+}
+
 /* Navbar principal */
 .navbar-priv {
   display: flex;

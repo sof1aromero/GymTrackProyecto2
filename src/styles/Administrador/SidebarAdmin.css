@@ -16,7 +16,6 @@
   
   /* Sidebar principal */
   .sidebar-admin {
-    width: 250px;
     background-color: var(--sidebar-bg);
     color: var(--sidebar-text-color);
     display: flex;

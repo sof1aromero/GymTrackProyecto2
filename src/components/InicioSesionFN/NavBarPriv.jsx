@@ -24,7 +24,7 @@ const NavBarPriv = () => {
       <div className="navbar-logo">GYM TRACK</div>
 
       <div className="navbar-links">
-        <Link to="/cliente/inicio" className="nav-link">Mis Servicios</Link>
+        <Link to="/cliente" className="nav-link">Mis Servicios</Link>
         <Link to="/cliente/pagos" className="nav-link">Mis Pagos</Link>
       </div>
 
