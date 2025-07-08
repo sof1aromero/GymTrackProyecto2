@@ -1,11 +1,14 @@
+/* ==== CONTENEDOR GENERAL ==== */
 .agenda-container {
   flex: 1;
   padding: 30px;
   background: linear-gradient(to right, #90caf9, #e3f2fd);
   min-height: 100vh;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* ==== ENCABEZADO ==== */
 .agenda-header {
   display: flex;
   justify-content: space-between;
@@ -15,8 +18,9 @@
 }
 
 .agenda-header h2 {
-  font-size: 2em;
-  font-weight: bold;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0;
 }
 
 .icons {
@@ -25,7 +29,7 @@
 }
 
 .icon {
-  font-size: 1.5em;
+  font-size: 1.3em;
   color: #0b3c49;
   cursor: pointer;
 }
@@ -34,52 +38,88 @@
   color: #00bcd4;
 }
 
+/* ==== CONTROLES DE MES ==== */
 .agenda-controls {
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin-bottom: 20px;
+  height: 55px;
 }
 
 .agenda-controls button {
   background-color: #00bcd4;
   border: none;
-  border-radius: 6px;
-  padding: 5px 10px;
+  border-radius: 8px;
+  padding: 6px 12px;
   color: white;
   cursor: pointer;
   font-size: 1em;
+  transition: background 0.3s ease;
+  margin-top: 5px;
 }
 
+.agenda-controls button:hover {
+  background-color: #0097a7;
+}
+
+/* ==== CALENDARIO ==== */
 .agenda-calendar {
   width: 100%;
   border-collapse: collapse;
   background-color: white;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
 }
 
 .agenda-calendar th,
 .agenda-calendar td {
   padding: 15px;
   text-align: center;
-  border: 1px solid #eee;
+  border: 1px solid #e0e0e0;
   font-weight: 500;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-.agenda-calendar td.hoy {
-  background-color: #ffcdd2;
+.agenda-calendar th {
+  background-color: #e3f2fd;
+  color: #0277bd;
+}
+
+.agenda-calendar td.semana-actual {
+  background-color: #d0f0ff;
   font-weight: bold;
+  border-radius: 8px;
 }
 
+.dia-seleccionado {
+  background-color: #0077b6 !important;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.semana-actual {
+  cursor: pointer;
+}
+
+.semana-actual:hover {
+  background-color: #b2ebf2;
+}
+
+/* ==== BOTONES PRINCIPALES ==== */
 .agenda-buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .btn {
@@ -107,4 +147,284 @@
 
 .btn-secondary:hover {
   background-color: #d9d9d9;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh; /* más pequeño para que se vea el footer */
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Títulos */
+.titulo-modal {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00796b;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.subtitulo-modal {
+  font-size: 0.75rem;
+  color: #555;
+  margin-bottom: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Formulario */
+.form-clase {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Etiquetas */
+.form-clase label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #004d40;
+  margin-bottom: 4px;
+}
+
+/* Inputs y textarea */
+.form-clase input,
+.form-clase textarea {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fefefe;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+/* Foco visual */
+.form-clase input:focus,
+.form-clase textarea:focus {
+  border-color: #00acc1;
+  outline: none;
+  background-color: #f0fbfd;
+}
+
+/* Lectura */
+input[readonly] {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+/* Fecha y hora */
+.form-fechas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+
+/* Botones */
+.botones-modal {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.botones-modal .btn {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7;
+}
+
+.btn-secondary {
+  background-color: #eeeeee;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background-color: #d0d0d0;
+}
+
+/* Botón cerrar */
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #777;
+  cursor: pointer;
+}
+
+.close-modal:hover {
+  color: #222;
+}
+
+/* Scroll visual */
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+.modal::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.modal::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.modal-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.titulo-modal {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00796b;
+  margin: 0;
+}
+
+.subtitulo-modal {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+/* Botón de cerrar */
+.close-modal {
+  position: absolute;
+  top: 0px;  /* antes estaba en 14px */
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #777;
+  cursor: pointer;
+  padding: 7px;
+  line-height: 1;
+}
+
+.close-modal:hover {
+  color: #222;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px; /* Antes era 600px */
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeInUp 0.3s ease-in-out;
+}
+
+.lista-historial {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 60vh;      /* scroll interno si crece mucho */
+  overflow-y: auto;
+}
+
+.item-historial {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+}
+
+.item-historial h4 {
+  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+}
+
+.sin-clases {
+  padding: 2rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* Historial - acciones */
+.item-historial {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.acciones-historial .btn {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+.btn-danger {
+  background: #e14a4a;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #c73838;
 }

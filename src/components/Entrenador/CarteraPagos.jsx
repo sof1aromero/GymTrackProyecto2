@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../styles/Entrenador/CarteraPagos.css";
-import DetallePagoModal from "./DetallePagoModal"; // Ajusta ruta si está en otra carpeta
-
+import DetallePagoModal from "./DetallePagoModal"; 
 const pagosSimulados = [
   { id: 1, documento: "001", nombre: "Vanesa", estado: "Pendiente", valor: 90000, fecha: "2025-07-01" },
   { id: 2, documento: "002", nombre: "Carlos", estado: "Pagado", valor: 70000,  fecha: "2025-07-03" },

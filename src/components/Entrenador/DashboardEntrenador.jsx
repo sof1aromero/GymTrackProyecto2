@@ -1,10 +1,12 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import logo from "/src/img/logo.png";
 import "../../styles/Entrenador/DashboardEntrenador.css";
 
 const DashboardEntrenador = () => {
   return (
+
     <div className="layout-entrenador">
+      
       <aside className="sidebar-entrenador">
         <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
         <div className="perfil-entrenador">
@@ -15,24 +17,21 @@ const DashboardEntrenador = () => {
           <p className="perfil-email">entrenador@gymtrack.com</p>
         </div>
 
-
         <nav className="nav-sidebar">
-          <Link to="/entrenador/inicio" className="nav-link">Inicio</Link>
-          <Link to="/entrenador/calendario" className="nav-link">Calendario</Link>
-          <Link to="/entrenador/cartera-pagos" className="nav-link">Cartera de Pagos</Link>
-          <Link to="/entrenador/perfil-entrenador" className="nav-link">Perfil</Link>
-          <Link to="/entrenador/notificaciones-entrenador" className="nav-link">Notificaciones</Link>
-          <Link to="/login" className="logout-link">Cerrar sesión</Link>
+          <NavLink to="/entrenador/inicio" className="nav-link">Inicio</NavLink>
+          <NavLink to="/entrenador/calendario" className="nav-link">Calendario</NavLink>
+          <NavLink to="/entrenador/cartera-pagos" className="nav-link">Cartera de Pagos</NavLink>
+          <NavLink to="/entrenador/perfil-entrenador" className="nav-link">Perfil</NavLink>
+          <NavLink to="/entrenador/notificaciones-entrenador" className="nav-link">Notificaciones</NavLink>
+          <a href="/login" className="logout-link">Cerrar sesión</a>
         </nav>
       </aside>
 
-      <div className="main-content">
+      <main className="main-content">
         <div className="contenido-pagina">
-          <Outlet /> {/* Aquí se renderiza el contenido dinámico */}
+          <Outlet />
         </div>
-
-
-      </div>
+      </main>
     </div>
   );
 };
