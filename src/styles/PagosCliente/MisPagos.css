@@ -1,0 +1,74 @@
+.mis-pagos-container {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mis-pagos-container h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.pagos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.pago-card {
+  background-color: white;
+  border: 1.8px solid #c0e4e2;
+  border-radius: 12px;
+  padding: 24px 18px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.pago-card h3 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pago-card p {
+  font-size: 14px;
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.btn-verde {
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-verde:hover {
+  background: #149c96;
+}
+
+
+/*.btn-volver-pagos-container {
+  text-align: center;
+}
+
+.btn-volver-pagos {
+  margin-top: 30px;
+  background: #d0faf6;
+  color: #176d6b;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+}
+*/
