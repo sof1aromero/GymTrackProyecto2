@@ -33,14 +33,6 @@ const SeccionClases = () => {
             Ver historial
           </button>
         </div>
-
-        <div className="clase-card">
-          <h3>Ver horario de clases</h3>
-          <p>Consulta los horarios disponibles en el calendario semanal.</p>
-          <button onClick={() => navigate("/cliente/horario")}>
-            Ver horario
-          </button>
-        </div>
       </div>
     </div>
   );
