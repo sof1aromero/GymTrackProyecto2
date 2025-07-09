@@ -1,25 +1,26 @@
-// src/components/ClasesCliente/ModalVerDetalles.jsx
 import React from "react";
 import "../../styles/ClasesCliente/ModalVerDetalles.css";
 
 const ModalVerDetalles = ({ clase, onClose }) => {
-    if (!clase) return null;
+  if (!clase) return null;
 
-    return (
-        <div className="modal-verdetalles-overlay">
-        <div className="modal-verdetalles-content">
-            <button className="close-button" onClick={onClose}>✕</button>
-            <h3>Detalles de la Clase</h3>
-            <p><strong>Clase:</strong> {clase.nombre}</p>
-            <p><strong>Fecha:</strong> {clase.horario}</p>
-            <p><strong>Hora:</strong> {clase.horario.split(" - ")[1]}</p>
-            <p><strong>Instructor:</strong> {clase.instructora}</p>
-            <p><strong>Duración:</strong> 45 minutos</p>
-            <p><strong>Lugar:</strong> Sala A</p>
-            <p><strong>Estado:</strong> {clase.estado}</p>
+  return (
+    <div className="modal-overlay">
+      <div className="modal-detalles">
+        <h3>Detalles de la clase</h3>
+        <p><strong>Nombre:</strong> {clase.nombre}</p>
+        <p><strong>Fecha:</strong> {clase.fecha}</p>
+        <p><strong>Hora:</strong> {clase.hora}</p>
+        <p><strong>Instructora:</strong> {clase.instructora}</p>
+        <p><strong>Duración:</strong> {clase.duracion}</p>
+        <p><strong>Lugar:</strong> {clase.lugar}</p>
+        <p><strong>Estado:</strong> {clase.estado}</p>
+        <div className="btn-detalles-container">
+          <button className="btn-cerrar" onClick={onClose}>Cerrar</button>
         </div>
-        </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ModalVerDetalles;

@@ -1,0 +1,64 @@
+.notificaciones-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 300px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  z-index: 1000;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.notificacion {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 12px 0;
+}
+
+.notificacion:last-child {
+  border-bottom: none;
+}
+
+.titulo {
+  font-weight: 600;
+  font-size: 15px;
+  color: #000000;
+  margin-bottom: 3px;
+}
+
+.detalle {
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.tiempo {
+  font-size: 12px;
+  color: #666666;
+}
+
+.ver-todas-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  background-color: #ffffff;
+  border: 1px solid #00a896;
+  color: #00a896;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.ver-todas-btn:hover {
+  background-color: #f0fefc;
+}
+
+.sin-notificaciones {
+  text-align: center;
+  color: #000;
+  font-size: 14px;
+  padding: 20px 0;
+}

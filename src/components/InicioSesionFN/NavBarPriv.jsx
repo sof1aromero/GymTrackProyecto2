@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBell, FaBars } from "react-icons/fa";
+import Notificaciones from "../Notificaciones/Notificaciones"; // Importa el componente
 import "../../styles/InicioSesionFN/NavBarPriv.css";
 
 const NavBarPriv = () => {
@@ -8,15 +9,31 @@ const NavBarPriv = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [tieneNotificaciones, setTieneNotificaciones] = useState(true);
 
+  // Lista de notificaciones de ejemplo
+  const notificaciones = [
+    {
+      id: 1,
+      titulo: "Clase de spinning",
+      detalle: "Hoy a las 11:00 a.m.",
+      tiempo: "Hace 30 minutos",
+    },
+    {
+      id: 2,
+      titulo: "Pago pendiente",
+      detalle: "Servicio con vencimiento el 28 de junio",
+      tiempo: "Hace 2 días",
+    },
+  ];
+
   const toggleNotification = () => {
     setShowNotifications(!showNotifications);
     setTieneNotificaciones(false);
-    setShowMenu(false); // Cierra menú si estaba abierto
+    setShowMenu(false);
   };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
-    setShowNotifications(false); // Cierra notificaciones si estaban abiertas
+    setShowNotifications(false);
   };
 
   return (
@@ -29,18 +46,19 @@ const NavBarPriv = () => {
       </div>
 
       <div className="navbar-icons">
-        {/* 🔔 Notificación */}
+        {/* 🔔 Ícono de notificaciones */}
         <div className="icon-wrapper" onClick={toggleNotification}>
           <FaBell className="icon" />
           {tieneNotificaciones && <span className="notification-dot" />}
           {showNotifications && (
-            <div className="dropdown notificaciones">
-              <p>No tienes notificaciones nuevas.</p>
-            </div>
+            <Notificaciones
+              notificaciones={notificaciones}
+              onClose={() => setShowNotifications(false)}
+            />
           )}
         </div>
 
-        {/* ☰ Menú */}
+        {/* ☰ Menú lateral */}
         <div className="icon-wrapper" onClick={toggleMenu}>
           <FaBars className="icon" />
           {showMenu && (
