@@ -6,6 +6,7 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import logo from "/src/img/logo.png"; // Asegúrate de que esta imagen exista
 import "../../styles/Administrador/SidebarAdmin.css"; // Estilos que también te doy ahora
 import InicioAdmin from './InicioAdmin';
+import RegistroEntrenadores from './RegistroEntrenadores';
 
 const SidebarAdmin = () => {
   return (
@@ -25,7 +26,7 @@ const SidebarAdmin = () => {
       <img src={logo} alt="GymTrack Logo" className="logo-sidebar" />
 
       <nav className="nav-sidebar">
-        <Link to="/admin/inicio" className="nav-link">Inicio</Link>
+        <Link to="/admin" className="nav-link">Inicio</Link>
         <Link to="/admin/registro" className="nav-link">Registrar Entrenadores</Link>
         <Link to="/admin/pagos" className="nav-link">Pagos</Link>
         <Link to="/admin/inventario" className="nav-link">Inventario</Link>
@@ -40,12 +41,13 @@ const SidebarAdmin = () => {
     </aside>
         </Col>
         <Col xs={8}>
-          <h1>ADMIN</h1>
+
           <Routes>
             <Route path='' element={<InicioAdmin></InicioAdmin>}></Route>
+            <Route path='/registro' element={<RegistroEntrenadores/>}></Route>
           </Routes>
         </Col>
-      </Row>|
+      </Row>
     </Container>
   );
 }
