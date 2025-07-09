@@ -1,0 +1,137 @@
+.ver-entrenadores-container {
+  padding: 20px;
+  background: linear-gradient(to bottom, #e3e3e8, #f8f8f8);
+  min-height: 100vh;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.buscador-box {
+  background: white;
+  border-radius: 12px;
+  border: 1.5px solid #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.buscador-box label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.buscador-box select,
+.buscador-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.buscador-box .busqueda-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.buscador-box button {
+  background: #007f77;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Lista de entrenadores */
+.lista-miembros {
+  background: #1aa59a;
+  padding: 15px 20px;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  font-weight: bold;
+}
+
+.entrenador-card {
+  background: white;
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.info-entrenador {
+  flex: 1 1 60%;
+  font-size: 0.95rem;
+}
+
+.info-entrenador span {
+  font-weight: bold;
+}
+
+.estado-activo {
+  background: #00b92a;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.chip {
+  display: inline-block;
+  background: #d8eaff;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin: 5px 5px 0 0;
+  font-size: 0.85rem;
+}
+
+.chip.exp {
+  background: #f5d0f0;
+  color: #a60078;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.acciones button {
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.btn-ver {
+  background: #007f77;
+}
+
+.btn-editar {
+  background: #019fb0;
+}
+
+.btn-eliminar {
+  background: #00a2a8;
+}
+

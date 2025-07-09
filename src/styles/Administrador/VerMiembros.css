@@ -1,0 +1,119 @@
+.ver-miembros-container {
+  padding: 20px;
+  background: linear-gradient(to bottom, #e3e3e8, #cfe8f3);
+  border-radius: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.subtexto {
+  color: #aaa;
+  margin-bottom: 20px;
+}
+
+.busqueda-container label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.filtro-busqueda {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filtro-busqueda select,
+.filtro-busqueda input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+.filtro-busqueda input {
+  flex: 1;
+}
+
+.btn-buscar {
+  background: #00b6b9;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lista-miembros {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.encabezado-lista {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.miembro-card {
+  background: #e8f9f1;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.info h4 {
+  margin-bottom: 10px;
+}
+
+.info p {
+  margin: 4px 0;
+}
+
+.estado {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.estado.activo {
+  background: #35b641;
+  color: white;
+}
+
+.acciones button {
+  display: block;
+  margin-bottom: 8px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-ver {
+  background: #1abc9c;
+  color: white;
+}
+
+.btn-editar {
+  background: #f39c12;
+  color: white;
+}
+
+.btn-eliminar {
+  background: #e74c3c;
+  color: white;
+}
