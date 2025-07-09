@@ -1,0 +1,237 @@
+:root {
+  --sidebar-bg: #0b3c49;
+  --sidebar-text-color: #ecf0f1;
+  --sidebar-accent-color: #00bcd4;
+  --sidebar-hover-bg: #155f6b;
+  --sidebar-border-color: rgba(255, 255, 255, 0.05);
+  --font-family-primary: 'Poppins', sans-serif;
+  --logo-width: 70px;
+  --page-bg: #f4f6f8;
+  --card-bg: #ffffff;
+  --card-radius: 16px;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+html, body {
+  font-family: var(--font-family-primary);
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background-color: var(--page-bg);
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar-entrenador {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text-color);
+  flex-direction: column;
+  padding: 30px 20px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-sidebar {
+  width: var(--logo-width);
+  margin: 0 auto 20px;
+  display: block;
+  opacity: 0.95;
+  transition: transform 0.3s ease;
+}
+
+.logo-sidebar:hover {
+  transform: scale(1.05);
+}
+
+.perfil-entrenador {
+  text-align: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--sidebar-border-color);
+  padding-bottom: 20px;
+}
+
+.perfil-icono .fas {
+  font-size: 60px;
+  color: var(--sidebar-accent-color);
+  margin-bottom: 10px;
+}
+
+.perfil-rol {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.perfil-email {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Navegación */
+.nav-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  color: var(--sidebar-text-color);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--sidebar-hover-bg);
+  transform: translateX(6px);
+}
+
+.nav-link i {
+  margin-right: 10px;
+  color: var(--sidebar-accent-color);
+}
+
+.nav-link:hover i {
+  color: white;
+}
+
+.nav-link.active {
+  background-color: var(--sidebar-accent-color);
+  color: white;
+  font-weight: 600;
+}
+
+/* Cerrar sesión */
+.logout-link {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--sidebar-border-color);
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.logout-link:hover {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: white;
+}
+
+.logout-link i {
+  margin-right: 10px;
+}
+
+/* Contenido principal */
+.main-content {
+  padding: 10px 40px 40px 40px; /* Menor padding superior */
+  background-color: var(--page-bg);
+  overflow-y: auto;
+}
+
+.dashboard-entrenador {
+  width: 1600px;              /* Más ancho */
+  max-width: none;         /* No limitar el ancho */
+  margin: 0 auto;
+  padding: 0px;
+  min-height: calc(100vh - 80px);
+  border-radius: var(--card-radius);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Cards o secciones dentro del dashboard */
+.dashboard-card {
+  background-color: var(--card-bg);
+  padding: 25px 30px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer-entrenador {
+  background-color: #111;
+  color: #ccc;
+  padding: 20px 30px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-entrenador .social-icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.2em;
+}
+
+.footer-entrenador .social-icons i {
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.footer-entrenador .social-icons i:hover {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .layout-entrenador {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar-entrenador {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    padding: 15px;
+    position: relative;
+    overflow-y: visible;
+  }
+
+  .perfil-entrenador {
+    display: none;
+  }
+
+  .nav-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.9em;
+    padding: 8px 10px;
+  }
+
+  .logo-sidebar {
+    width: 70px;
+  }
+
+  .main-content {
+    padding: 20px;
+  }
+
+  .dashboard-entrenador {
+    width: 100%;
+    padding: 20px;
+  }
+}

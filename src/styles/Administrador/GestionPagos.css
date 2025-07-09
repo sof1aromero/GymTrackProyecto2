@@ -1,0 +1,83 @@
+.pagos-container {
+  padding: 30px;
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color:black;
+}
+
+.subtitulo {
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.resumen-pagos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.card-pago {
+  background: #fcfcfc;
+  border-radius: 12px;
+  padding: 20px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.card-pago i {
+  font-size: 24px;
+}
+
+
+/* Tabs y filtros */
+.filtro-pagos {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  background: #000000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.tabs .active {
+  background: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filtros input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.filtros select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}

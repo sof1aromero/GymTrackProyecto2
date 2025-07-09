@@ -1,0 +1,102 @@
+.ver-mas-container {
+  background: linear-gradient(to bottom, #94d9e3, #50c5ae);
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.ver-mas-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #000;
+}
+
+.servicio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.servicio-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+.servicio-card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #000;
+}
+
+.servicio-card p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+.estado-activo {
+  color: #0f9d58;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 0.8rem;
+  display: block;
+}
+
+.agregar-btn {
+  background-color: #00b894;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.agregar-btn:hover {
+  background-color: #019879;
+}
+
+.volver-btn {
+  background-color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: bold;
+  color: #00b894;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.volver-btn:hover {
+  background-color: #f1f1f1;
+}
+
+.notas-finales {
+  margin-top: 2rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.notas-finales b {
+  font-weight: bold;
+}

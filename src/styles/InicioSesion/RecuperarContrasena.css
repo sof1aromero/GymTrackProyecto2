@@ -1,0 +1,65 @@
+/* Asegura que el contenido llene toda la altura y el footer se quede abajo */
+.recuperar-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.recuperar-formulario {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recuperar-formulario h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.recuperar-formulario label {
+  font-weight: bold;
+  margin-top: 1rem;
+  display: block;
+}
+
+.recuperar-formulario input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.recuperar-formulario button {
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to right, #00c9b7, #176d6b);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.recuperar-formulario button:hover {
+  opacity: 0.9;
+}
+
+.mensaje {
+  background-color: #ffeeba;
+  color: #856404;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}

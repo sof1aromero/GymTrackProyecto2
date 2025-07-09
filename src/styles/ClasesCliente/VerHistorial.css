@@ -1,0 +1,88 @@
+/* src/styles/ClasesCliente/VerHistorial.css */
+
+.ver-historial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  background-color: #f9f9f9;
+  margin-bottom: 50px;
+}
+
+.ver-historial-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #176d6b;
+}
+
+.historial-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.clase-item {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #2cd3cf;
+}
+
+.clase-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.clase-item p {
+  margin: 4px 0;
+  color: #555;
+}
+
+.estado {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.estado.finalizada {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.estado.cancelada {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.mensaje-vacio {
+  text-align: center;
+  color: #888;
+  font-size: 16px;
+}
+
+.volver-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn-volver {
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-volver:hover {
+  background: #2cd3cf;
+}

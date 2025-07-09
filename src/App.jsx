@@ -1,40 +1,133 @@
-import { Routes, Route, Router } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './styles/InicioSesionFN/navBarPriv.css';
 
+// Componentes comunes
+import NavBar from "./components/InicioSesionFN/NavBar";
+import NavBarPriv from "./components/InicioSesionFN/NavBarPriv";
+import Footer from "./components/InicioSesionFN/Footer";
 
-import './App.css'
-import NavBar from '../src/components/ServiciosNotificacionesMas/NavBar'
-import MisServicios from './components/ServiciosNotificacionesMas/MisServicios';
-import Perfil from '../src/components/ServiciosNotificacionesMas/Perfil';
-import Footer from '../src/components/ServiciosNotificacionesMas/Footer'
-import CentroNotificaciones from '../src/components/ServiciosNotificacionesMas/CentroNotificaciones';
-import MenuNotificaciones from './components/ServiciosNotificacionesMas/MenuNotificaciones';
-import AgregarServicio from './components/ServiciosNotificacionesMas/AgregarServicio';
-import  "./styles/estilos/LAYOUTT.css"
+// Autenticación
+import Registro from "./components/InicioSesion/Registro";
+import RecuperarContrasena from "./components/InicioSesion/RecuperarContrasena";
+import IniciarSesion from "./components/InicioSesion/IniciarSesion";
+import CambiarContrasena from "./components/InicioSesion/CambiarContrasena";
 
+// Cliente
+import InicioClienteServicios from "./components/serviciosCliente/InicioClienteServicios";
+import CalendarioCliente from "./components/ClienteEntrenador/CalendarioCliente";
+import HistorialClases from "./components/ClienteEntrenador/HistorialClases";
+import ConfirmacionReserva from "./components/ClienteEntrenador/ConfirmacionReserva";
+import SeccionClases from "./components/ClasesCliente/SeccionClases";
+import AgendarClase from "./components/ClasesCliente/AgendarClase";
+import DetallesServicio from "./components/serviciosCliente/DetallesServicio";
+import VerMasServicios from "./components/serviciosCliente/VerMasServicios";
+
+// Entrenador
+import DashboardEntrenador from "./components/Entrenador/DashboardEntrenador";
+import InicioEntrenador from "./components/Entrenador/InicioEntrenador";
+import CalendarioEntrenador from "./components/Entrenador/CalendarioEntrenador";
+import CarteraPagos from "./components/Entrenador/CarteraPagos";
+import PerfilEntrenador from "./components/Entrenador/PerfilEntrenador";
+import NotificacionesEntrenador from "./components/Entrenador/NotificacionesEntrenador";
+
+// Administrador
+import DashboardAdmin from "./components/Administrador/DashboardAdmin";
+import InicioAdmin from "./components/Administrador/InicioAdmin";
+import RegistroEntrenadores from "./components/Administrador/RegistroEntrenadores";
+import GestionPagos from "./components/Administrador/GestionPagos";
+import PagosClientesAdmin from "./components/Administrador/PagosClientesAdmin";
+import PagosEntrenadores from "./components/Administrador/PagosEntrenadores";
+import DistribucionEntre from "./components/Administrador/DistribucionEntre";
+import InventarioAdmin from "./components/Administrador/InventarioAdmin";
+
+// Visualización pública
+import InicioInformativo from "./components/Visualizacion/InicioInformativo";
+import ServiciosGymVisu from "./components/Visualizacion/ServiciosGymVisu";
+import VisitarGym from "./components/Visualizacion/Visitar";
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem("isAuthenticated") === "true"
+  );
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setIsAuthenticated(localStorage.getItem("isAuthenticated") === "true");
+    };
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
   return (
-    <>
-      <NavBar />
-      <Routes>
-        {/*<Route path="/" element={<IniciarSesion />} />*/}
-        {/*<Route path="/registro" element={<Registro />} />*/}
-        {/*<Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />*/}
-        {/*<Route path="/iniciar-sesion" element={<IniciarSesion />} />*/}
-        {/*<Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
-        <Route path="/calendario" element={<CalendarioCliente />} />
-        <Route path="/historial-clases" element={<HistorialClases />} />
-        <Route path="/confirmacion-reserva" element={<ConfirmacionReserva/>} />*/}
-        
-        <Route path='/perfil' element={<Perfil/>}/>
-        <Route path='/mis-servicios' element={<MisServicios/>}/>
-        <Route path='/agregar-servicio' element={<AgregarServicio/>}/>
-        <Route path='/menuNotificaciones' element={<MenuNotificaciones/>}/>
-        <Route path='/notificaciones' element={<CentroNotificaciones/>}/>
-      </Routes>
-      <Footer />
-    </>
-  )
+    <BrowserRouter basename="/">
+      {/* Navbar dinámico */}
+      <div className="contenedor-cliente">
+      <Row>
+         <Col>
+        <Routes>
+          {/* Página principal */}
+          <Route
+            path="/"
+            element={
+              isAuthenticated ? (
+                <InicioClienteServicios />
+              ) : (
+                <>
+                  <InicioInformativo />
+                  <ServiciosGymVisu />
+                  <VisitarGym />
+                </>
+              )
+            }
+          />
+
+          {/* Rutas públicas */}
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
+          <Route path="/iniciar-sesion" element={<IniciarSesion />} />
+          <Route path="/cambiar-contrasena" element={<CambiarContrasena />} />
+
+          {/* Rutas Cliente */}
+          <Route path="/cliente/*" element={isAuthenticated ? <InicioClienteServicios /> : <Navigate to="/iniciar-sesion" />} />
+          {/*<Route path="/calendario" element={isAuthenticated ? <CalendarioCliente /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/historial-clases" element={isAuthenticated ? <HistorialClases /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/confirmacion-reserva" element={isAuthenticated ? <ConfirmacionReserva /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/cliente/clases" element={isAuthenticated ? <SeccionClases /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/cliente/clases/agendar" element={isAuthenticated ? <AgendarClase /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/cliente/detalles" element={isAuthenticated ? <DetallesServicio /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/cliente/servicios" element={isAuthenticated ? <VerMasServicios /> : <Navigate to="/iniciar-sesion" />} />*/}
+
+          {/* Rutas Admin */}
+          <Route path="/admin/*" element={isAuthenticated ? <DashboardAdmin /> : <Navigate to="/iniciar-sesion" />} />
+          {/*<Route path="/admin/registro" element={isAuthenticated ? <RegistroEntrenadores /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/admin/pagos" element={isAuthenticated ? <GestionPagos /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/admin/clientes" element={isAuthenticated ? <PagosClientes /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/admin/entrenadores" element={isAuthenticated ? <PagosEntrenadores /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/admin/distribucion" element={isAuthenticated ? <DistribucionEntre /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/admin/inventario" element={isAuthenticated ? <InventarioAdmin /> : <Navigate to="/iniciar-sesion" />} />*/}
+
+          {/* Rutas Entrenador */}
+          <Route path="/entrenador/*" element={isAuthenticated ? <DashboardEntrenador /> : <Navigate to="/iniciar-sesion" />} />
+          {/*<Route path="/entrenador/inicio" element={isAuthenticated ? <InicioEntrenador /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/entrenador/calendario" element={isAuthenticated ? <CalendarioEntrenador /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/entrenador/cartera-pagos" element={isAuthenticated ? <CarteraPagos /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/entrenador/perfil-entrenador" element={isAuthenticated ? <PerfilEntrenador /> : <Navigate to="/iniciar-sesion" />} />
+          <Route path="/entrenador/notificaciones-entrenador" element={isAuthenticated ? <NotificacionesEntrenador /> : <Navigate to="/iniciar-sesion" />} />*/}
+        </Routes>
+        </Col>
+        </Row>
+        <Row>
+        <Col>
+        <Footer />
+        </Col>
+      </Row >
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
