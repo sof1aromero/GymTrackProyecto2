@@ -1,8 +1,10 @@
 // src/components/PagosCliente/RealizarPago.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../../styles/PagosCliente/RealizarPago.css";
 
 const RealizarPago = () => {
+    const navigate = useNavigate();
     const [mostrarModal, setMostrarModal] = useState(false);
     const [mostrarConfirmacion, setMostrarConfirmacion] = useState(false);
 
@@ -59,13 +61,15 @@ const RealizarPago = () => {
                 <div className="modal-buttons vertical">
                 <button className="confirmar">Ver factura</button>
                 <button className="confirmar">Descargar factura</button>
-                <button className="cancelar" onClick={() => setMostrarConfirmacion(false)}>Volver al área de pagos</button>
+                <button className="cancelar" onClick={() => navigate("/cliente/pagos")}>
+                    Volver al área de pagos
+                </button>
                 </div>
             </div>
             </div>
         )}
         </div>
     );
-    };
+};
 
 export default RealizarPago;
