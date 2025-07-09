@@ -4,8 +4,9 @@
   text-align: center;
   padding: 1rem 0;
   width: 100%;
-  position: fixed;
-  bottom: 0px;
+  margin-top: auto; /* 🔑 Esto empuja el footer hacia abajo si usas flex */
+  position: relative; /* ya no es fixed */
+  bottom: 0;
 }
 
 .social-icons {

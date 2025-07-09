@@ -1,5 +1,6 @@
 .cartera-container {
   padding: 30px;
+   max-width: 1080px;
   background: linear-gradient(to bottom, #f0f9ff, #e1f5fe);
   min-height: 100vh;
   font-family: 'Poppins', sans-serif;

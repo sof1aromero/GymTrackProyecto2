@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import "../../styles/Entrenador/CarteraPagos.css";
-import DetallePagoModal from "./DetallePagoModal"; 
+import DetallePagoModal from "./DetallePagoModal";
+
 const pagosSimulados = [
-  { id: 1, documento: "001", nombre: "Vanesa", estado: "Pendiente", valor: 90000, fecha: "2025-07-01" },
-  { id: 2, documento: "002", nombre: "Carlos", estado: "Pagado", valor: 70000,  fecha: "2025-07-03" },
-  { id: 3, documento: "003", nombre: "Laura",  estado: "Vencido", valor: 50000,  fecha: "2025-06-15" },
+  { id: 1, documento: "001", cliente: "Vanesa", estado: "Pendiente", valor: 90000, fecha: "2025-07-01", metodoPago: "Efectivo" },
+  { id: 2, documento: "002", cliente: "Carlos", estado: "Pagado", valor: 70000, fecha: "2025-07-03", metodoPago: "Efectivo" },
+  { id: 3, documento: "003", cliente: "Laura", estado: "Vencido", valor: 50000, fecha: "2025-06-15", metodoPago: "Efectivo" },
 ];
 
-const CarteraPagos = () => {
-  const [documentoFiltro, setDocumentoFiltro]   = useState("");
-  const [estadoFiltro,    setEstadoFiltro]      = useState("");
-  const [rango,           setRango]             = useState("");
-  const [resultados,      setResultados]        = useState(pagosSimulados);
+const CarteraPagosEntrenador = () => {
+  const [documentoFiltro, setDocumentoFiltro] = useState("");
+  const [estadoFiltro, setEstadoFiltro] = useState("");
+  const [rango, setRango] = useState("");
+  const [resultados, setResultados] = useState(pagosSimulados);
   const [pagoSeleccionado, setPagoSeleccionado] = useState(null);
 
   const aplicarFiltros = () => {
@@ -36,8 +37,8 @@ const CarteraPagos = () => {
       const fechaPago = new Date(pago.fecha);
       return (
         (!documentoFiltro || pago.documento.includes(documentoFiltro)) &&
-        (!estadoFiltro    || pago.estado === estadoFiltro) &&
-        (!fechaInicio     || (fechaPago >= fechaInicio && fechaPago <= hoy))
+        (!estadoFiltro || pago.estado === estadoFiltro) &&
+        (!fechaInicio || (fechaPago >= fechaInicio && fechaPago <= hoy))
       );
     });
 
@@ -116,27 +117,31 @@ const CarteraPagos = () => {
           <table className="tabla-pagos">
             <thead>
               <tr>
+                <th>Factura</th>
                 <th>N° Documento</th>
                 <th>Cliente</th>
                 <th>Estado</th>
                 <th>Valor</th>
                 <th>Fecha</th>
+                <th>Método de Pago</th>
                 <th>Acción</th>
               </tr>
             </thead>
             <tbody>
               {resultados.length === 0 ? (
                 <tr>
-                  <td colSpan="6" style={{ textAlign: "center" }}>No se encontraron resultados</td>
+                  <td colSpan="8" style={{ textAlign: "center" }}>No se encontraron resultados</td>
                 </tr>
               ) : (
                 resultados.map((pago) => (
                   <tr key={pago.id}>
+                    <td>{pago.id}</td>
                     <td>{pago.documento}</td>
                     <td>{pago.cliente}</td>
                     <td>{pago.estado}</td>
                     <td>${pago.valor.toLocaleString()}</td>
                     <td>{pago.fecha}</td>
+                    <td>{pago.metodoPago}</td>
                     <td>
                       <button
                         className="btn-detalle"
@@ -153,13 +158,14 @@ const CarteraPagos = () => {
         </div>
       </div>
 
-
-      <DetallePagoModal
-        pago={pagoSeleccionado}
-        onClose={() => setPagoSeleccionado(null)}
-      />
+      {pagoSeleccionado && (
+        <DetallePagoModal
+          pago={pagoSeleccionado}
+          onClose={() => setPagoSeleccionado(null)}
+        />
+      )}
     </>
   );
 };
 
-export default CarteraPagos;
+export default CarteraPagosEntrenador;

@@ -8,7 +8,7 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
-const Calendario = () => {
+const CalendarioEntrenador = () => {
   /* ---------- Estados principales ---------- */
   const [mostrarModal, setMostrarModal]       = useState(false);  // Modal crear / editar
   const [mostrarHistorial, setMostrarHistorial] = useState(false); // Modal historial
@@ -101,7 +101,7 @@ const Calendario = () => {
       <section className="agenda-content">
         <div className="agenda-controls">
           <button><FaChevronLeft /></button>
-          <span>Julio del 2025</span>
+          <span>Junio del 2025</span>
           <button><FaChevronRight /></button>
         </div>
 
@@ -264,4 +264,4 @@ const Calendario = () => {
   );
 };
 
-export default Calendario;
+export default CalendarioEntrenador;
