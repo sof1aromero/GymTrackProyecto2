@@ -39,7 +39,7 @@ import DashboardAdmin from "./components/Administrador/DashboardAdmin";
 import InicioAdmin from "./components/Administrador/InicioAdmin";
 import RegistroEntrenadores from "./components/Administrador/RegistroEntrenadores";
 import GestionPagos from "./components/Administrador/GestionPagos";
-import PagosClientes from "./components/Administrador/PagosClientes";
+import PagosClientesAdmin from "./components/Administrador/PagosClientesAdmin";
 import PagosEntrenadores from "./components/Administrador/PagosEntrenadores";
 import DistribucionEntre from "./components/Administrador/DistribucionEntre";
 import InventarioAdmin from "./components/Administrador/InventarioAdmin";

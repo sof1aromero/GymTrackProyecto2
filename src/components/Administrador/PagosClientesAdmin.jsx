@@ -1,6 +1,6 @@
-import "../../styles/Administrador/PagosClientes.css";
+import "../../styles/Administrador/PagosClientesAdmin.css";
 
-const PagosClientes = () => {
+const PagosClientesAdmin = () => {
   return (
     <div className="pagos-container">
       <h2 className="titulo">Gestión de Pagos</h2>
@@ -57,4 +57,4 @@ const PagosClientes = () => {
   );
 };
 
-export default PagosClientes;
+export default PagosClientesAdmin;
