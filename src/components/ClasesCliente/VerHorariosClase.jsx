@@ -41,10 +41,9 @@ const VerHorariosClase = () => {
 
       const clasesGuardadas = JSON.parse(localStorage.getItem("clasesReservadas")) || [];
       const nuevasClases = [...clasesGuardadas, nuevaClase];
-      
-      localStorage.setItem("clasesReservadas", JSON.stringify(nuevasClases));
 
-      navigate("/cliente/clases/mis-clases");
+      localStorage.setItem("clasesReservadas", JSON.stringify(nuevasClases));
+      navigate("/cliente/mis-clases");
     } else {
       alert("Por favor selecciona un horario disponible.");
     }
@@ -65,7 +64,7 @@ const VerHorariosClase = () => {
             <h4>Hoy (10 junio)</h4>
             {horarios.hoy.map(({ hora, disponible }) => (
               <button
-                key={"hoy-" + hora}
+                key={`hoy-${hora}`}
                 className={`horario-opcion ${diaSeleccionado === "hoy" && horarioSeleccionado === hora ? "selected" : ""} ${!disponible ? "disabled" : ""}`}
                 onClick={() => seleccionarHorario("hoy", hora, disponible)}
                 disabled={!disponible}
@@ -79,7 +78,7 @@ const VerHorariosClase = () => {
             <h4>Mañana (11 junio)</h4>
             {horarios.manana.map(({ hora, disponible }) => (
               <button
-                key={"manana-" + hora}
+                key={`manana-${hora}`}
                 className={`horario-opcion ${diaSeleccionado === "manana" && horarioSeleccionado === hora ? "selected" : ""} ${!disponible ? "disabled" : ""}`}
                 onClick={() => seleccionarHorario("manana", hora, disponible)}
                 disabled={!disponible}
