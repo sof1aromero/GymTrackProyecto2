@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../styles/Entrenador/PerfilEntrenador.css';
 import { FaCalendarAlt, FaPen } from 'react-icons/fa';
 
-function Perfil() {
+function PerfilEntrenador() {
   const [correo, setCorreo] = useState('');
   const [telefono, setTelefono] = useState('');
   const [cambios, setCambios] = useState(false);
@@ -182,4 +182,4 @@ function Perfil() {
   );
 }
 
-export default Perfil;
+export default PerfilEntrenador;

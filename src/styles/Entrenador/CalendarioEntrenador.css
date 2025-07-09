@@ -2,6 +2,7 @@
 .agenda-container {
   flex: 1;
   padding: 30px;
+  max-width: 1090px;
   background: linear-gradient(to right, #90caf9, #e3f2fd);
   min-height: 100vh;
   box-sizing: border-box;

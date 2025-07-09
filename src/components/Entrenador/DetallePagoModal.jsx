@@ -7,20 +7,29 @@ const DetallePagoModal = ({ pago, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-detalle">
-        <h2>Detalles del Pago</h2>
+        <h3>Detalle del Pago</h3>
+
         <div className="detalle-info">
+          <p><strong>ID Factura:</strong> {pago.id}</p>
           <p><strong>Documento:</strong> {pago.documento}</p>
-          <p><strong>Nombre:</strong> {pago.nombre}</p>
-          <p><strong>Monto:</strong> ${pago.monto}</p>
+          <p><strong>Cliente:</strong> {pago.cliente}</p>
           <p><strong>Estado:</strong> {pago.estado}</p>
-          <p><strong>Fecha de Inicio del Pago:</strong> {pago.fecha}</p>
-          <p><strong>Fecha de Vencimiento del Pago:</strong> {pago.fecha}</p>
-          <p><strong>Método de Pago:</strong> {pago.metodo}</p>
+          <p><strong>Valor:</strong> ${pago.valor.toLocaleString()}</p>
+          <p><strong>Fecha:</strong> {pago.fecha}</p>
+          <p><strong>Método de Pago:</strong> {pago.metodoPago}</p>
         </div>
-        <div className="modal-buttons">
-          <button className="cerrar-btn" onClick={onClose}>Cerrar</button>
-          <button className="descargar-btn">Descargar Factura PDF</button>
-        </div>
+
+        <button className="btn-cerrar" onClick={onClose}>
+          Cerrar
+        </button>
+<button
+  className="descargar-btn"
+  onClick={() => {
+    alert("✅ Factura descargada correctamente");
+  }}
+>
+  Descargar Factura PDF
+</button>
       </div>
     </div>
   );
