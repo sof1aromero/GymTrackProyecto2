@@ -5,7 +5,7 @@
     --sidebar-hover-bg: #155f6b;
     --sidebar-border-color: rgba(255, 255, 255, 0.05);
     --font-family-primary: 'Poppins', sans-serif;
-    --logo-width: 110px;
+    --logo-width: 100px;
   }
   
   body {
@@ -22,7 +22,7 @@
     flex-direction: column;
     padding: 30px 20px;
     height: 100vh;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     overflow-y: auto;
@@ -66,7 +66,7 @@
   .nav-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
   }
   .nav-link {
     display: flex;

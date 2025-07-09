@@ -1,6 +1,10 @@
 import "../../styles/Administrador/InventarioAdmin.css";
+import AgregarEquipo from "./AgregarEquipo";
+import { useState } from "react";
+
 
 const InventarioGym = () => {
+  const [mostrarModal, setMostrarModal] = useState(false);
   return (
     <div className="inventario-container">
       <h2 className="titulo">Inventario GymTrack</h2>
@@ -28,7 +32,14 @@ const InventarioGym = () => {
           <option>Accesorios</option>
         </select>
 
-        <button className="btn-agregar">+ Agregar Equipo</button>
+        <button className="btn-agregar" onClick={() => setMostrarModal(true)}>
+        + Agregar Equipo
+      </button>
+         {/* Modal */}
+      <AgregarEquipo
+        isOpen={mostrarModal}
+        onClose={() => setMostrarModal(false)}
+      />
       </div>
     </div>
   );
