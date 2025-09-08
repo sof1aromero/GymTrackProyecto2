@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
-import logo from "/src/img/logo.png"; // Asegúrate de que esta imagen exista
-import "../../styles/Administrador/SidebarAdmin.css"; // Estilos que también te doy ahora
+import logo from "/src/img/logo.png";
+import "../../styles/Administrador/SidebarAdmin.css";
 import InicioAdmin from './InicioAdmin';
 import RegistroEntrenadores from './RegistroEntrenadores';
 import GestionPagos from './GestionPagos';
@@ -15,8 +15,7 @@ import ReportesAdmin from './ReportesAdmin';
 
 const SidebarAdmin = () => {
   return (
-    
-    <Container>
+
       <Row>
         <Col >
           <aside className="sidebar-admin">
@@ -42,7 +41,7 @@ const SidebarAdmin = () => {
         <Link to="/admin/entrenadores" className="nav-link">Pagos Entrenadores</Link>
         <Link to="/admin/distribucion" className="nav-link">Distribucion Entrenadores</Link>
         <Link to="/admin/Tabla inventario" className="nav-link">Tablas Inventario</Link>
-        <Link to="/login" className="logout-link">Cerrar sesión</Link>
+          <Link to="/" className="logout-link">Cerrar sesión</Link>
       </nav>
     </aside>
         </Col>
@@ -56,10 +55,10 @@ const SidebarAdmin = () => {
             <Route path='/miembros' element={<VerMiembros/>}></Route>
             <Route path='/coaches' element={<VerEntrenadores/>}></Route>
             <Route path='/reportes' element={<ReportesAdmin/>}></Route>
+
           </Routes>
         </Col>
       </Row>
-    </Container>
   );
 }
 

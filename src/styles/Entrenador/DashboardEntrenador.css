@@ -139,7 +139,7 @@ html, body {
 }
 
 .dashboard-entrenador {
-  width: 1600px;              /* Más ancho */
+  width: auto;              /* Más ancho */
   max-width: none;         /* No limitar el ancho */
   margin: 0 auto;
   padding: 0px;

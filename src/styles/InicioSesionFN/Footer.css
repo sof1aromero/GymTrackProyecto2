@@ -3,9 +3,9 @@
   color: white;
   text-align: center;
   padding: 1rem 0;
-  width: 100%;
-  margin-top: auto; /* 🔑 Esto empuja el footer hacia abajo si usas flex */
-  position: relative; /* ya no es fixed */
+  width: auto;
+  margin-top: auto;
+  position: relative;
   bottom: 0;
 }
 

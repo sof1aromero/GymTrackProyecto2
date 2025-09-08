@@ -11,7 +11,7 @@ const InicioEntrenador = () => {
         <div className="contenido animated-fade-in">
           <h1>
             ¡Bienvenido <br />
-            <span>Entrenador Rogelio</span>!
+            <span>Entrenador</span>!
           </h1>
           <p className="mensaje">¡Empecemos!</p>
         </div>
