@@ -122,7 +122,7 @@ function App() {
         </Row>
         <Row>
         <Col>
-        <Footer />
+
         </Col>
       </Row >
       </div>
