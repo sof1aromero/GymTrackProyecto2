@@ -2,14 +2,14 @@
 .agenda-container {
   flex: 1;
   padding: 30px;
-  max-width: 1090px;
-  background: linear-gradient(to right, #90caf9, #e3f2fd);
+  width: 100%;
+  background: linear-gradient(to right, #edfffb, #dce9f3);
   min-height: 100vh;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ==== ENCABEZADO ==== */
+
 .agenda-header {
   display: flex;
   justify-content: space-between;

@@ -28,7 +28,7 @@ html, body {
   background-color: var(--sidebar-bg);
   color: var(--sidebar-text-color);
   flex-direction: column;
-  padding: 30px 20px;
+  padding: 40px 20px;
   height: 100vh;
   position: sticky;
   top: 0;
@@ -133,13 +133,13 @@ html, body {
 
 /* Contenido principal */
 .main-content {
-  padding: 10px 40px 40px 40px; /* Menor padding superior */
+    /* Menor padding superior */
   background-color: var(--page-bg);
   overflow-y: auto;
 }
 
 .dashboard-entrenador {
-  width: 1600px;              /* Más ancho */
+  width: auto;              /* Más ancho */
   max-width: none;         /* No limitar el ancho */
   margin: 0 auto;
   padding: 0px;

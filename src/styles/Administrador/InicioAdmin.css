@@ -1,8 +1,10 @@
 .dashboard {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .card {

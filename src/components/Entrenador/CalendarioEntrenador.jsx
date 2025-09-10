@@ -42,9 +42,9 @@ const CalendarioEntrenador = () => {
     setClases((prev) => {
       const nuevas = [...prev];
       if (editIndex !== null) {
-        nuevas[editIndex] = claseForm;   // ⟵ editar
+        nuevas[editIndex] = claseForm;
       } else {
-        nuevas.push(claseForm);          // ⟵ crear
+        nuevas.push(claseForm);
       }
       return nuevas;
     });
