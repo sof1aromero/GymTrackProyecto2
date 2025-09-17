@@ -1,0 +1,80 @@
+.historial-clases-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .historial-clases-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tabla-historial {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; 
+  }
+  
+  .tabla-historial table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-historial th,
+  .tabla-historial td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .tabla-historial th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+  }
+  
+  .tabla-historial tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .cancelada {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .realizada {
+    color: green;
+  }
+  
+  .boton-clases-antiguas {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-clases-antiguas:hover {
+    background-color: #e0e0e0;
+  }
+
+.filtros-historial {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    justify-content: flex-end; 
+  }
+  
+  .filtros-historial label {
+    font-weight: bold;
+  }
+  
+  .filtros-historial select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  

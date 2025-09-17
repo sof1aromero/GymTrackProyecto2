@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.clases-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px 100px;
+  text-align: center;
+}
+
+.clases-wrapper h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+/* ✅ Grid con 2 columnas fijas */
+.clases-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+  gap: 40px;
+  justify-items: center;
+}
+
+/* ✅ Cards más anchas */
+.clase-card {
+  background-color: #fff;
+  border: 2px solid #60a5a5;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%; /* ocupa casi todo el ancho de su columna */
+  max-width: 550px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.clase-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.clase-card p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.clase-card button {
+  background-color: #3bbcb2;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.clase-card button:hover {
+  background-color: #2fa59d;
+}
+
+/* ✅ Responsivo: en pantallas pequeñas muestra solo 1 columna */
+@media (max-width: 768px) {
+  .clases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clase-card {
+    width: 100%;
+  }
+}

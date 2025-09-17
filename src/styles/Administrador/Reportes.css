@@ -1,0 +1,92 @@
+.reportes-container {
+  padding: 20px;
+  background: linear-gradient(to bottom, #eaeaf0, #cfe7f3);
+}
+
+.subtexto {
+  color: #b4b4b4;
+  margin-bottom: 20px;
+}
+
+.filtros-reportes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.selectores, .fechas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.filtro {
+  display: flex;
+  flex-direction: column;
+}
+
+.filtro label {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.filtro select,
+.filtro input[type="date"] {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btn-reporte {
+  padding: 10px 20px;
+  background: #02b8cf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 42px;
+}
+
+.resumen-metricas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card-metrica {
+  background: white;
+  border-left: 5px solid #00b894;
+  padding: 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.tabla-reportes table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tabla-reportes th, .tabla-reportes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-reportes .vacio {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}

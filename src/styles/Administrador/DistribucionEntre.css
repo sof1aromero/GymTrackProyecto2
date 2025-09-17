@@ -1,0 +1,67 @@
+.distribucion-container {
+  padding-top: 20px;
+}
+
+.distribucion-container h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.card-distribucion {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.encabezado-distribucion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.encabezado-distribucion .sub-doc {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.bloque-distribucion {
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.bloque-distribucion strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.bloque-distribucion p {
+  margin: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bloque-distribucion span {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Colores */
+.verde {
+  background: #e5fbe8;
+}
+
+.azul {
+  background: #d9e9ff;
+}
+
+.morado {
+  background: #efe6f8;
+}

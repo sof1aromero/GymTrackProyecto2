@@ -1,0 +1,103 @@
+.inventario-container {
+    width: 100%;
+  max-width: 1200px; /* o más si quieres más ancho */
+  margin: 0 auto;
+  padding: 20px;
+
+
+}
+
+.titulo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitulo {
+  color: #bcbcbc;
+  margin-bottom: 20px;
+}
+
+/* Tarjetas de resumen */
+.resumen-inventario {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card-info {
+  padding: 18px;
+  border-radius: 12px;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Colores personalizados */
+.c1 {
+  background: linear-gradient(to right, #77cbe2, #0f4faf);
+}
+
+.c2 {
+  background: linear-gradient(to right, #81c784, #388e3c);
+}
+
+.c3 {
+  background: linear-gradient(to right, #988db6, #3f51b5);
+}
+
+.c4 {
+  background: linear-gradient(to right, #e99b99, #d32f2f);
+}
+
+/* Filtros */
+.filtros-inventario {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
+.buscador {
+  position: relative;
+  flex: 1;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 8px 12px 8px 32px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.buscador i {
+  position: absolute;
+  top: 9px;
+  left: 10px;
+  color: #888;
+}
+
+.selector-categoria {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.btn-agregar {
+  background: #00b39f;
+  color: white;
+  border: none;
+  padding: 9px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-agregar:hover {
+  background: #009c89;
+}

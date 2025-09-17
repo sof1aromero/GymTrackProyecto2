@@ -1,0 +1,48 @@
+.contenedor-tabla {
+  padding: 20px;
+  background: linear-gradient(to bottom, #e3e3e8, #c9e3ee);
+  border-radius: 8px;
+}
+
+.titulo-inventario {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitulo-inventario {
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tabla-contenedor {
+  background-color: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+.tabla-inventario {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.tabla-inventario thead {
+  background-color: #f7f7f7;
+}
+
+.tabla-inventario th,
+.tabla-inventario td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+.fila-vacia {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}

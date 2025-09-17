@@ -1,0 +1,106 @@
+/* src/styles/PagosCliente/MetodoPago.css */
+
+.metodo-pago-container {
+  padding: 30px 20px;
+  background-color: #ffffff;
+  max-width: 500px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+
+.metodo-pago-container h2 {
+  color: #176d6b;
+  margin-bottom: 24px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.metodo-pago-container p {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #444;
+  padding-left: 8px;
+}
+
+.editar-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.editar-formulario label {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  color: #222;
+}
+
+.editar-formulario input,
+.editar-formulario select {
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+
+.editar-formulario input:focus,
+.editar-formulario select:focus {
+  border-color: #2cd3cf;
+  outline: none;
+}
+
+.editar-botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.editar-botones button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.editar-botones button:first-child {
+  background-color: #2cd3cf;
+  color: white;
+}
+
+.editar-botones button:last-child {
+  background-color: #ccc;
+  color: #333;
+}
+
+.editar-botones button:hover {
+  transform: translateY(-2px);
+}
+
+.btn-volver {
+  display: block;
+  margin: 30px auto 0;
+  background-color: transparent;
+  border: 2px solid #176d6b;
+  color: #176d6b;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+  background-color: #176d6b;
+  color: white;
+}

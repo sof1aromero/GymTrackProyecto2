@@ -1,0 +1,54 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-detalles {
+  background: #ffffff;
+  color: #000;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.modal-detalles h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #222;
+}
+
+.modal-detalles p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.btn-detalles-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-cerrar {
+  background-color: #e63946;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cerrar:hover {
+  background-color: #d62839;
+}

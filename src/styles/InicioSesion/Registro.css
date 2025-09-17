@@ -1,0 +1,92 @@
+/* Fondo general del registro */
+.registro-container {
+  background-image: url("/imagCouple.jpg"); /* Asegúrate de que la imagen esté en public */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Capa oscura encima del fondo */
+.registro-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  color: white;
+  margin: 40px 20px;
+}
+
+/* Título */
+.titulo-registro {
+  font-size: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Campos */
+.campo-registro {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.campo-registro label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.campo-registro input,
+.campo-registro select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Botón de registro */
+.btn-registrar {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: linear-gradient(to right, #2cd3cf, #176d6b);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.btn-registrar:hover {
+  opacity: 0.9;
+}
+
+/* Enlace inferior */
+.link-login {
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link-login a {
+  text-decoration: underline;
+  color: #2cd3cf;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

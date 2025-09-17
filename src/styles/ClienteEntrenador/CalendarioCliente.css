@@ -1,0 +1,153 @@
+.calendario-container {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.calendario-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.calendario-contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.calendario {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.calendario h3 {
+  margin: 0 0 10px 0;
+}
+
+.calendario table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.calendario th,
+.calendario td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.calendario td:hover {
+  background-color: #d6eaff;
+  transform: scale(1.1);
+}
+
+.calendario td.disponible {
+  background-color: #b2f7b2;
+  font-weight: bold;
+}
+
+.detalle-servicio {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  padding: 20px;
+  width: 280px;
+}
+
+.detalle-servicio p {
+  margin: 8px 0;
+}
+
+.disponible-texto {
+  color: green;
+  font-weight: bold;
+}
+
+.info-calendario {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  margin-top: 15px;
+  text-align: left; 
+}
+
+.texto-importante {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333; 
+  margin-bottom: 5px;
+}
+
+.disponible-color {
+  color: green;
+  font-weight: bold;
+}
+
+.finalizado-color {
+  color: red;
+  font-weight: bold;
+}
+
+.texto-recordatorio {
+  font-style: normal;
+  color: #000;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.05em; 
+}
+
+.texto-agradecimiento {
+  margin-top: 10px;
+  color: #555;
+}
+
+.info-calendario ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.info-calendario li {
+  margin-bottom: 5px;
+}
+
+.calendario td.finalizado {
+  background-color: #ffdddd; 
+  color: #888; 
+  font-style: italic; 
+}
+
+.finalizado-texto {
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.btn-reservar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; 
+}
+
+.btn-reservar-container a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #505050; 
+  color: white; 
+  text-decoration: none; 
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease; 
+  text-align: center;
+}
+
+.btn-reservar-container a:hover {
+  background-color: #272727; 
+}
